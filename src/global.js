@@ -1,3 +1,5 @@
+import { createGlobalStyle } from 'styled-components';
+
 export const GlobalStyles = createGlobalStyle`
   html, body {
     margin: 0;
@@ -6,13 +8,16 @@ export const GlobalStyles = createGlobalStyle`
   *, *::after, *::before {
     box-sizing: border-box;
   }
-  body {
+  .App {
+    height: 100vh;
+  }
+  .messaging {
     align-items: center;
-    background: #0D0C1D;
-    color: #EFFFFA;
+    background: ${({ theme }) => theme.primaryLight};
+    color: ${({ theme }) => theme.primaryDark};
     display: flex;
     font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
-    height: 100vh;
+    height: 100%;
     justify-content: center;
     text-rendering: optimizeLegibility;
   }

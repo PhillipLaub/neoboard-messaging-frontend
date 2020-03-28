@@ -1,0 +1,38 @@
+[
+  {
+    "image": "",
+    "username": "Arjun",
+    "comment": "So Warner, does the McLaurin series for sin(x) have the signs alternating?",
+    "id": 0
+  },
+  {
+    "image": "",
+    "username": "Warner",
+    "comment": "The notes from his lecture slides shows that the signs alternate for this series",
+    "id": 1
+  },
+  {
+    "image": "",
+    "username": "Cindy L.",
+    "comment": "Thanks Warner, I did not realize the notes were posted online, I wish the professor would inform us if the notes will be placed online",
+    "id": 2
+  },
+  {
+    "image": "",
+    "username": "Lebaron",
+    "comment": "Is anyone else having problems accessing the online lab for Thursday's assignment?",
+    "id": 3
+  },
+  {
+    "image": "",
+    "username": "Arjun",
+    "comment": "The professor did not address it in class today Lebaron, but it seems the server is down today for the entiure school. Any announcements on when things will be restored?",
+    "id": 4
+  },
+  {
+    "image": "",
+    "username": "Itzel",
+    "comment": "No word on when the server will be up, I just messaged the professor about it. Has anyone begun problem #4 from the homework? If anyone plans on working on it today, please let me know, would like to put our heads together to get it done",
+    "id": 5
+  }
+]
