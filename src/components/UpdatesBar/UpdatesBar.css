@@ -1,5 +1,5 @@
 .update-bar {
-  height: 10vh;
+  height: 3vh;
   background-color: #2ec1d4;
-  font-weight: bolder;
+  padding: 0.3%;
 }

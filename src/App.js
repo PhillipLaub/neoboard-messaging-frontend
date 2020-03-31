@@ -23,7 +23,7 @@ function App() {
         <>
           <GlobalStyles />
           <Navbar />
-          <UpdatesBar />
+          <UpdatesBar subject={subject} />
           <Comments comments={comments} />
         </>
       </ThemeProvider>
