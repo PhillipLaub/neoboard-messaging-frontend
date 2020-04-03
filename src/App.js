@@ -15,7 +15,7 @@ import userComments from './data/comments';
 
 function App() {
   const [comments, setComments] = useState(userComments); // right now this is just dummy data for the comments to fill up biology channel
-  const [subject, setSubject] = useState('Calculus 4');
+  const [subject, setSubject] = useState('Calculus 3');
 
   return (
     <div className='App'>
