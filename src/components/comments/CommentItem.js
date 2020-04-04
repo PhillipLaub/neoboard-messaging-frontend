@@ -1,11 +1,15 @@
 import React from 'react';
+import './CommentItem.css';
 
 const Comment = ({ username, image, comment, id }) => {
   return (
     <div className='comment'>
-      <div className='image'>{image}</div>
-      <div className='username'>{username}</div>
-      <div className='comment'>{comment}</div>
+      <div>
+        <img className='image' src={require(`../../${image}`)}></img>
+        <div className='username'>{username}</div>
+      </div>
+
+      <div className='message'>{comment}</div>
     </div>
   );
 };
