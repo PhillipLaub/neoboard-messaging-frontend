@@ -3,37 +3,42 @@
     "image": "data/images/arjun.jpg",
     "username": "Arjun",
     "comment": "So Warner, does the McLaurin series for sin(x) have the signs alternating?",
-    "timestamp": "",
+    "timestamp": "Yesterday 7:46 PM",
     "id": 0
   },
   {
     "image": "data/images/warner.jpg",
     "username": "Warner",
-    "comment": "The notes from his lecture slides shows that the signs alternate for this series",
+    "comment": "The notes from his lecture slides shows that the signs alternate for this series.",
+    "timestamp": "8:02 PM",
     "id": 1
   },
   {
     "image": "data/images/cindy.jpg",
     "username": "Cindy L.",
-    "comment": "Thanks Warner, I did not realize the notes were posted online, I wish the professor would inform us if the notes will be placed online",
+    "comment": "Thanks Warner, I did not realize the notes were posted online. I wish the professor would inform us if the notes will be placed online.",
+    "timestamp": "11:08 PM",
     "id": 2
   },
   {
     "image": "data/images/lebaron.jpg",
     "username": "Lebaron",
     "comment": "Is anyone else having problems accessing the online lab for Thursday's assignment?",
+    "timestamp": "10:12 AM",
     "id": 3
   },
   {
     "image": "data/images/arjun.jpg",
     "username": "Arjun",
     "comment": "The professor did not address it in class today Lebaron, but it seems the server is down today for the entiure school. Any announcements on when things will be restored?",
+    "timestamp": "10:30 AM",
     "id": 4
   },
   {
     "image": "data/images/itzel.jpg",
     "username": "Itzel",
-    "comment": "No word on when the server will be up, I just messaged the professor about it. Has anyone begun problem #4 from the homework? If anyone plans on working on it today, please let me know, would like to put our heads together to get it done",
+    "comment": "No word on when the server will be up, I just messaged the professor about it. Has anyone begun problem #4 from the homework? If anyone plans on working on it today, please let me know, would like to put our heads together to get it done.",
+    "timestamp": " 12:20 PM",
     "id": 5
   }
 ]

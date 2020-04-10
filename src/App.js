@@ -16,6 +16,7 @@ import userComments from './data/comments';
 function App() {
   const [comments, setComments] = useState(userComments); // right now this is just dummy data for the comments to fill up biology channel
   const [channel, setChannel] = useState('Calculus 3');
+  const [newMessages, setNewMessages] = useState(7);
 
   return (
     <div className='App'>
@@ -23,7 +24,7 @@ function App() {
         <>
           <GlobalStyles />
           <Navbar />
-          <UpdatesBar subject={channel} />
+          <UpdatesBar subject={channel} newMessages={newMessages} />
           <Comments comments={comments} />
         </>
       </ThemeProvider>
