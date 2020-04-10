@@ -9,7 +9,6 @@ import { BrowserRouter as Router, Switch, Route, Link } from 'react-router-dom';
 
 import Navbar from './components/navbar/Navbar';
 import Comments from './components/comments/Comments';
-import UpdatesBar from './components/updatesBar/UpdatesBar';
 import MessageBar from './components/message/MessageBar';
 
 import userComments from './data/comments';
@@ -24,12 +23,13 @@ function App() {
       <ThemeProvider theme={theme}>
         <>
           <GlobalStyles />
-          <div className='utility-bar'>
-            <Navbar />
-            <UpdatesBar subject={channel} newMessages={newMessages} />
-          </div>
+          <Navbar />
 
-          <Comments comments={comments} />
+          <Comments
+            comments={comments}
+            subject={channel}
+            newMessages={newMessages}
+          />
 
           <MessageBar />
         </>

@@ -10,8 +10,3 @@ html {
   /* The percentage is 62.5% because it equates to 10px assuming the 16px default */
   font-size: 62.5%;
 }
-
-.utility-bar {
-  position: fixed;
-  width: 100%;
-}

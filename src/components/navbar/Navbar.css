@@ -5,5 +5,5 @@
   background: linear-gradient(0deg, #169dbf, #169dbf), #162d3f;
   box-shadow: 0 0.2rem 0.4rem rgba(0, 0, 0, 0.4);
 
-  position: relative; /* This is for the burger menu */
+  position: fixed;
 }
