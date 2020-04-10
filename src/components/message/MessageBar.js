@@ -4,12 +4,12 @@ import './MessageBar.css';
 const MessageBar = () => {
   return (
     <div className='message-bar'>
-      <form action=''>
+      <form action='POST'>
         <input type='text' className='input-message' name='message' />
         <div className='buttons'>
-          <i class='fas fa-camera'></i>
-          <i class='fas fa-paperclip'></i>
-          <i class='far fa-paper-plane'></i>
+          <i class='fas fa-camera message-bar-button'></i>
+          <i class='fas fa-paperclip message-bar-button'></i>
+          <i class='far fa-paper-plane message-bar-button'></i>
         </div>
       </form>
     </div>
