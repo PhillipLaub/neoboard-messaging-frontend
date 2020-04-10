@@ -23,8 +23,11 @@ function App() {
       <ThemeProvider theme={theme}>
         <>
           <GlobalStyles />
-          <Navbar />
-          <UpdatesBar subject={channel} newMessages={newMessages} />
+          <div className='utility-bar'>
+            <Navbar />
+            <UpdatesBar subject={channel} newMessages={newMessages} />
+          </div>
+
           <Comments comments={comments} />
         </>
       </ThemeProvider>
