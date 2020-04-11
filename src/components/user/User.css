@@ -4,25 +4,73 @@
   position: relative;
 }
 
-.image-container {
+/* .image-container {
   margin-bottom: 1rem;
-}
+} */
 
 .logged-in-user-image {
   border-radius: 50%;
-  height: 13.5rem;
-  margin: 0 auto 0 auto;
-  display: block; /* Margin auto only works with block elements because they take up the entire horizontal space, so there is space for margins to be set */
 }
+
 /*  */
+.top-section-container {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  padding: 0 auto;
+  margin-bottom: 1rem;
+}
+
+.user-flex {
+  height: 13.5rem;
+}
+
 .reactions-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
 }
 
 .reactions-left {
+  text-align: center;
+  padding: 0 1rem 0 0;
 }
 
 .reactions-right {
+  text-align: center;
+  padding: 0 0 0 1rem;
 }
+
+.reaction {
+  background: linear-gradient(0deg, #daf2f5, #daf2f5), #162d3f;
+  border-radius: 15px;
+  padding: 0.4rem 0.6rem;
+
+  font-family: Quicksand;
+  font-size: 1.6rem;
+  line-height: 2rem;
+}
+
+.gold {
+  color: goldenrod;
+  text-shadow: 1px 1px black;
+}
+
+.silver {
+  color: silver;
+  text-shadow: 1px 1px black;
+}
+
+.yellow {
+  color: gold;
+  text-shadow: 1px 1px black;
+}
+
+.pink {
+  color: pink;
+  text-shadow: 1px 1px black;
+}
+
 /*  */
 .basic-info {
   margin: 0 0 1.2rem 0;

@@ -19,16 +19,36 @@ const User = ({
 }) => {
   return (
     <div className='user-container'>
-      <div className='image-container'>
-        <div className='reactions-container'>
-          <div className='reactions-left'></div>
+      {/* This section is hard coded for now... */}
+      <div className='top-section-container'>
+        <div className='reactions-container reactions-left user-flex'>
+          <div className='reaction'>
+            <i class='fas fa-circle silver'></i> 1
+          </div>
+          <div className='reaction'>
+            <i class='fas fa-circle gold'></i> 3
+          </div>
+          <div className='reaction'>
+            <i class='fas fa-check green'></i> 14{' '}
+            <i class='fas fa-long-arrow-alt-up green'></i> 1
+          </div>
+          <div className='reaction'>
+            <i class='fas fa-thumbs-up yellow'></i> 59
+          </div>
         </div>
+
         <img
-          className='logged-in-user-image'
+          className='logged-in-user-image user-flex'
           src={require(`../../${image}`)}
         ></img>
-        <div className='reactions-container'>
-          <div className='reactions-right'></div>
+
+        <div className='reactions-container reactions-right user-flex'>
+          <div className='reaction'>
+            <i class='fas fa-brain pink'></i> 13
+          </div>
+          <div className='reaction'>
+            <i class='far fa-clock'></i> 8
+          </div>
         </div>
       </div>
 
