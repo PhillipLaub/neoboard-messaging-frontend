@@ -47,7 +47,32 @@
   line-height: 2rem;
 }
 
+.school-info-item-group {
+  padding: 1rem 1.8rem 1rem 2.8rem;
+  font-family: Quicksand;
+  font-size: 1.6rem;
+  line-height: 2rem;
+}
+
+.group-item {
+  display: inline-block;
+}
+
+.edit-button {
+  float: right;
+  color: #169dbf;
+  border: 3px solid #169dbf;
+  border-radius: 4px;
+  padding: 0.1rem 2rem;
+  margin-top: -0.4rem;
+  font-size: 1.4rem;
+}
+
+.edit-button:hover {
+  background: rgba(0, 0, 0, 0.1);
+  border-color: #148fad;
+}
+
 .blue {
   background: linear-gradient(0deg, #daf2f5, #daf2f5), #162d3f;
-  border: solid blue 0;
 }

@@ -44,22 +44,36 @@ const User = ({
 
         <div className='school-info-item'>Grade: {grade}</div>
 
-        <div className='school-info-item blue'>City: {city}</div>
-
-        <div className='school-info-item'>
-          Calendar:{' '}
-          {calender.map((item, index) => (
-            <span>{item}</span>
-          ))}
+        <div className='school-info-item-group blue'>
+          <div className='group-item'>City: {city}</div>
+          <div className='group-item edit-button'>Edit</div>
         </div>
 
-        <div className='school-info-item blue'>Schedule of Classes </div>
-
-        <div className='school-info-item'>
-          Matching Poll: {matchingPoll}% Complete
+        <div className='school-info-item-group'>
+          <div className='group-item'>
+            Calendar:{' '}
+            {calender.map((item, index) => (
+              <span>{item}</span>
+            ))}
+          </div>
+          <div className='group-item edit-button'>Edit</div>
+        </div>
+        <div className='school-info-item-group blue'>
+          <div className='group-item'>Schedule of Classes </div>
+          <div className='group-item edit-button'>Edit</div>
         </div>
 
-        <div className='school-info-item blue'>Privacy Settings </div>
+        <div className='school-info-item-group'>
+          <div className='group-item'>
+            Matching Poll: {matchingPoll}% Complete
+          </div>
+          <div className='group-item edit-button'>Continue</div>
+        </div>
+
+        <div className='school-info-item-group blue'>
+          <div className='group-item'>Privacy Settings</div>
+          <div className='group-item edit-button'>Edit</div>
+        </div>
       </div>
 
       {/*  */}
