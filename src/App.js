@@ -14,7 +14,8 @@ import Messaging from './components/pages/Messaging';
 import userComments from './data/comments';
 
 // For the logged in user layout
-import userInfo from './data/userInfo.json';
+import User from './components/user/User';
+import loggedInUserInfo from './data/userInfo.json';
 
 function App() {
   // For the messaging layout
@@ -23,7 +24,7 @@ function App() {
   const [newMessages, setNewMessages] = useState(7);
 
   // For the logged in user layout
-  const [userInfo, setUserInfo] = useState();
+  const [userInfo, setUserInfo] = useState(loggedInUserInfo);
 
   return (
     <div className='App'>
