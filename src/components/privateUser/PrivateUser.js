@@ -2,14 +2,14 @@ import React from 'react';
 import './PrivateUser.css';
 
 const User = ({
-  userInfo: { image, firstName, lastName, joinDate, college },
+  privateUserInfo: { image, firstName, lastName, joinDate, college },
 }) => {
   return (
     <div className='user-container'>
       {/* This section is hard coded for now... */}
       <div className='top-section-container'>
         <img
-          className='logged-in-user-image user-flex'
+          className='user-page-image user-flex'
           src={require(`../../${image}`)}
         ></img>
       </div>
@@ -18,8 +18,19 @@ const User = ({
         <div className='name center'>
           {firstName} {lastName}
         </div>
-        <div className='basic-info-item'>Overachieving since {joinDate}</div>
+        <div className='basic-info-item top-margin-buffer'>
+          Overachieving since {joinDate}
+        </div>
         <div className='basic-info-item'>{college}</div>
+      </div>
+
+      <div className='private-info'>
+        <div className='private-icon'>
+          <i class='fas fa-user-secret'></i>
+        </div>
+        <div className='private-message'>
+          {firstName} has requested that their profile remain private
+        </div>
       </div>
 
       <div className='return-footer'>

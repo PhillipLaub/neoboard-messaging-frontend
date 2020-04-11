@@ -21,6 +21,10 @@ import loggedInUserInfo from './data/userInfo.json';
 import OtherUser from './components/otherUser/OtherUser';
 import otherUserInformation from './data/otherUserInfo.json';
 
+// For private user layout
+import PrivateUser from './components/privateUser/PrivateUser';
+import privateUserInfo from './data/privateUserInfo.json';
+
 function App() {
   // For the messaging layout
   const [comments, setComments] = useState(userComments); // right now this is just dummy data for the comments to fill up biology channel
@@ -39,7 +43,7 @@ function App() {
         <>
           <GlobalStyles />
           <Navbar />
-          <OtherUser otherUserInfo={otherUserInfo} />
+          <PrivateUser privateUserInfo={privateUserInfo} />
         </>
       </ThemeProvider>
     </div>
@@ -47,6 +51,8 @@ function App() {
 }
 
 /* <User userInfo={userInfo} /> */
+
+/* <OtherUser otherUserInfo={otherUserInfo} /> */
 
 /*
           <Messaging
