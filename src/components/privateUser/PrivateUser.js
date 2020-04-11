@@ -16,7 +16,7 @@ const User = ({
 
       <div className='basic-info'>
         <div className='name center'>
-          {firstName} {lastName}
+          {firstName} {lastName} <i class='fas fa-circle yellow no-shadow'></i>
         </div>
         <div className='basic-info-item top-margin-buffer'>
           Overachieving since {joinDate}

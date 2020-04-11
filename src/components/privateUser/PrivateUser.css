@@ -13,3 +13,7 @@
 .private-message {
   font-size: 1.6rem;
 }
+
+.no-shadow {
+  text-shadow: none;
+}
