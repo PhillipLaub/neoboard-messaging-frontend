@@ -20,12 +20,16 @@ const User = ({
   return (
     <div className='user-container'>
       <div className='image-container'>
-        <div className='reactions-1'></div>
+        <div className='reactions-container'>
+          <div className='reactions-left'></div>
+        </div>
         <img
           className='logged-in-user-image'
           src={require(`../../${image}`)}
         ></img>
-        <div className='reactions-2'></div>
+        <div className='reactions-container'>
+          <div className='reactions-right'></div>
+        </div>
       </div>
 
       <div className='basic-info'>
@@ -40,9 +44,9 @@ const User = ({
       {/*  */}
 
       <div className='school-info'>
-        <div className='school-info-item blue'>Major: {major}</div>
+        <div className='school-info-item-group blue'>Major: {major}</div>
 
-        <div className='school-info-item'>Grade: {grade}</div>
+        <div className='school-info-item-group'>Grade: {grade}</div>
 
         <div className='school-info-item-group blue'>
           <div className='group-item'>City: {city}</div>
@@ -58,9 +62,16 @@ const User = ({
           </div>
           <div className='group-item edit-button'>Edit</div>
         </div>
-        <div className='school-info-item-group blue'>
+        <div className='school-info-item-group blue schedule-group'>
           <div className='group-item'>Schedule of Classes </div>
           <div className='group-item edit-button'>Edit</div>
+          <div className='schedule-info-item-group'>
+            {schedule.map((item) => (
+              <div className='schedule-item'>
+                {item.class}: {item.days} {item.time}
+              </div>
+            ))}
+          </div>
         </div>
 
         <div className='school-info-item-group'>
@@ -77,6 +88,10 @@ const User = ({
       </div>
 
       {/*  */}
+
+      <div className='return-footer'>
+        <div className='return-button'>Return</div>
+      </div>
     </div>
   );
 };
