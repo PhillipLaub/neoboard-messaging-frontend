@@ -17,6 +17,10 @@ import userComments from './data/comments';
 import User from './components/user/User';
 import loggedInUserInfo from './data/userInfo.json';
 
+// For another user layout
+import OtherUser from './components/otherUser/OtherUser';
+import otherUserInformation from './data/otherUserInfo.json';
+
 function App() {
   // For the messaging layout
   const [comments, setComments] = useState(userComments); // right now this is just dummy data for the comments to fill up biology channel
@@ -26,26 +30,31 @@ function App() {
   // For the logged in user layout
   const [userInfo, setUserInfo] = useState(loggedInUserInfo);
 
+  // For another user layout
+  const [otherUserInfo, setOtherUserInfo] = useState(otherUserInformation);
+
   return (
     <div className='App'>
       <ThemeProvider theme={theme}>
         <>
           <GlobalStyles />
           <Navbar />
-          <User userInfo={userInfo} />
+          <OtherUser otherUserInfo={otherUserInfo} />
         </>
       </ThemeProvider>
     </div>
   );
 }
 
-{
-  /*           <Messaging
+/* <User userInfo={userInfo} /> */
+
+/*
+          <Messaging
             comments={comments}
             subject={channel}
             newMessages={newMessages}
-          /> */
-}
+          /> 
+*/
 
 export default App;
 
