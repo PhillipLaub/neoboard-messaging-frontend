@@ -9,9 +9,12 @@ import { BrowserRouter as Router, Switch, Route, Link } from 'react-router-dom';
 
 import Navbar from './components/navbar/Navbar';
 
+// For the messaging layout
 import Messaging from './components/pages/Messaging';
-
 import userComments from './data/comments';
+
+// For the logged in user layout
+import userInfo from './data/userInfo.json';
 
 function App() {
   // For the messaging layout
@@ -20,6 +23,7 @@ function App() {
   const [newMessages, setNewMessages] = useState(7);
 
   // For the logged in user layout
+  const [userInfo, setUserInfo] = useState();
 
   return (
     <div className='App'>
@@ -27,6 +31,7 @@ function App() {
         <>
           <GlobalStyles />
           <Navbar />
+          <User userInfo={userInfo} />
         </>
       </ThemeProvider>
     </div>
