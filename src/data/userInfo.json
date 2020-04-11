@@ -7,7 +7,7 @@
   "major": "Psychobiology",
   "grade": "Senior",
   "city": "Springfield, ST",
-  "calender": ["Google", "Canvas"],
+  "calender": ["Google, ", "Canvas"],
   "schedule": [
     { "class": "Biology", "days": "MWF", "time": "9:00 - 10:00 AM" },
     { "class": "Calculus AB", "days": "MWF", "time": "2:00 - 3:00 PM" },
