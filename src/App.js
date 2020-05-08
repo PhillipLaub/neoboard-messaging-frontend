@@ -25,6 +25,10 @@ import otherUserInformation from './data/otherUserInfo.json';
 import PrivateUser from './components/privateUser/PrivateUser';
 import privateUserInfo from './data/privateUserInfo.json';
 
+// For survey form layout
+import SurveyForm from './components/';
+import privateUserInfo from './data/privateUserInfo.json';
+
 function App() {
   // For the messaging layout
   const [comments, setComments] = useState(userComments); // right now this is just dummy data for the comments to fill up biology channel
