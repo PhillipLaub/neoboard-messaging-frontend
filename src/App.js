@@ -26,8 +26,7 @@ import PrivateUser from './components/privateUser/PrivateUser';
 import privateUserInfo from './data/privateUserInfo.json';
 
 // For survey form layout
-import SurveyForm from './components/';
-import privateUserInfo from './data/privateUserInfo.json';
+import SurveyForm from './components/surveyForm/SurveyForm';
 
 function App() {
   // For the messaging layout
@@ -44,19 +43,27 @@ function App() {
   return (
     <div className='App'>
       <ThemeProvider theme={theme}>
-        <>
+        <Fragment>
           <GlobalStyles />
           <Navbar />
-          <PrivateUser privateUserInfo={privateUserInfo} />
-        </>
+          <Messaging
+            comments={comments}
+            subject={channel}
+            newMessages={newMessages}
+          />
+        </Fragment>
       </ThemeProvider>
     </div>
   );
 }
 
+/* <SurveyForm userInfo={userInfo} /> */
+
 /* <User userInfo={userInfo} /> */
 
 /* <OtherUser otherUserInfo={otherUserInfo} /> */
+
+/* <PrivateUser privateUserInfo={privateUserInfo} /> */
 
 /*
           <Messaging

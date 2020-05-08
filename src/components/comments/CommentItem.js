@@ -9,7 +9,6 @@ const Comment = ({ username, image, comment, timestamp, id }) => {
         <div className='username'>{username}</div>
         <div className='timestamp'>{timestamp}</div>
       </div>
-
       <div className='message'>{comment}</div>
     </div>
   );

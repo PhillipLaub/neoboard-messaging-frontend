@@ -1,0 +1,7 @@
+.survey-container {
+  background: linear-gradient(180deg, #beeadf 0%, rgba(255, 255, 255, 0) 100%),
+    linear-gradient(0deg, rgba(22, 157, 191, 0.9), rgba(22, 157, 191, 0.9));
+  height: 100vh;
+  padding: 9.5rem 1.5rem 1rem 1.5rem;
+  position: relative;
+}
