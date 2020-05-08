@@ -3,9 +3,12 @@ import './SurveyForm.css';
 
 import SurveyHeader from './formItems/surveyHeader/SurveyHeader';
 
-const SurveyForm = ({ userInfo }) => {
-  return <div className='survey-container'>{userInfo.firstName}</div>;
-  /*   <SurveyHeader name={userInfo.firstName} />; */
+const SurveyForm = ({ userInfo: { firstName } }) => {
+  return (
+    <div className='survey-container'>
+      <SurveyHeader name={firstName} />
+    </div>
+  );
 };
 
 export default SurveyForm;
