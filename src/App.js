@@ -46,11 +46,7 @@ function App() {
         <Fragment>
           <GlobalStyles />
           <Navbar />
-          <Messaging
-            comments={comments}
-            subject={channel}
-            newMessages={newMessages}
-          />
+          <SurveyForm userInfo={userInfo} />
         </Fragment>
       </ThemeProvider>
     </div>
