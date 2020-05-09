@@ -94,23 +94,23 @@
 
 /* :45 */
 .minute-item:first-child {
-  top: 70%;
-  left: 15.36%;
+  top: 50%;
+  left: 20%;
 }
 /* :00 */
 .minute-item:nth-child(2) {
-  top: 50%;
-  left: 10%;
+  top: 20%;
+  left: 50%;
 }
 /* :15 */
 .minute-item:nth-child(3) {
-  top: 30%;
-  left: 15.36%;
+  top: 50%;
+  left: 80%;
 }
 /* :30 */
 .minute-item:nth-child(4) {
-  top: 15.195%;
-  left: 30.75%;
+  top: 80%;
+  left: 50%;
 }
 
 .time-input {
