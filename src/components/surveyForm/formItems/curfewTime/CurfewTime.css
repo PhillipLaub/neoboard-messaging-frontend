@@ -145,25 +145,3 @@
 .half-container-right {
   width: 40%;
 }
-
-.checkbox {
-  margin: 1rem auto 0 auto;
-  text-align: center;
-}
-
-.checkbox-input {
-  /* This is to hide browser default checkbox styles */
-  position: absolute;
-  opacity: 0;
-  cursor: pointer;
-  height: 0;
-  width: 0;
-
-  display: inline-block;
-  vertical-align: middle;
-}
-
-.checkbox-text {
-  display: inline-block;
-  margin-left: 0.5rem;
-}

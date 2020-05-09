@@ -1,3 +1,7 @@
+.survey-form {
+  margin-top: 0 !important;
+}
+
 .survey-container {
   background: linear-gradient(180deg, #beeadf 0%, rgba(255, 255, 255, 0) 100%),
     linear-gradient(0deg, rgba(22, 157, 191, 0.9), rgba(22, 157, 191, 0.9));
@@ -23,4 +27,38 @@
 
   text-align: center;
   margin-bottom: 1.3rem;
+}
+
+.checkbox-container {
+  margin-top: 1rem;
+  text-align: center;
+}
+
+.answer-container {
+  margin-bottom: 0.6rem;
+}
+
+.answer-container-left {
+  padding-left: 1.5rem;
+  text-align: left;
+}
+
+.checkbox {
+  margin: 1rem auto 0 auto;
+}
+
+.checkbox-input {
+  display: inline-block;
+  vertical-align: middle;
+}
+
+.checkbox-text {
+  display: inline-block;
+  margin-left: 0.5rem;
+}
+
+.notice-text {
+  text-align: center;
+  font-weight: 600;
+  margin-top: 1rem;
 }

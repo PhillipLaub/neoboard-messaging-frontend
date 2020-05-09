@@ -45,12 +45,10 @@ const CurfewTime = () => {
           </div>
         </div>
       </div>
-      <div className='checkbox'>
-        <div className='checkbox-container'>
-          <input type='checkbox' className='checkbox-input' />
-          <div className='checkbox-text'>
-            I have an erratic sleep schedule due to work
-          </div>
+      <div className='checkbox-container'>
+        <input type='checkbox' className='checkbox-input' />
+        <div className='checkbox-text'>
+          I have an erratic sleep schedule due to work
         </div>
       </div>
     </div>

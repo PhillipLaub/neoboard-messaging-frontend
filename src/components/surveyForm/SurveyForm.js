@@ -12,7 +12,7 @@ const SurveyForm = ({ userInfo: { firstName } }) => {
   return (
     <div className='survey-container'>
       <SurveyHeader name={firstName} />
-      <form action=''>
+      <form className='survey-form' action=''>
         <CurfewTime />
         <ImportCalendar />
         <SpecialCircumstances />
