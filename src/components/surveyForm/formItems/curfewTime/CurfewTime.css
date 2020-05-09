@@ -1,0 +1,128 @@
+.clock {
+  background: linear-gradient(0deg, #daf2f5, #daf2f5), #162d3f;
+  width: 17rem;
+  height: 17rem;
+  border-radius: 50%;
+  position: relative;
+  overflow: hidden;
+  text-align: center;
+}
+
+.time-item {
+  position: absolute;
+  height: 16%;
+  width: 16%;
+  background: tomato;
+  transition: all 0.4s;
+  border-radius: 50%;
+
+  align-items: center;
+  display: inline-block;
+  transform: translate(-50%, -50%);
+}
+
+/* 8 */
+.time-item:first-child {
+  top: 70%;
+  left: 15.36%;
+}
+/* 9 */
+.time-item:nth-child(2) {
+  top: 50%;
+  left: 10%;
+}
+/* 10 */
+.time-item:nth-child(3) {
+  top: 30%;
+  left: 15.36%;
+}
+/* 11 */
+.time-item:nth-child(4) {
+  top: 15.195%;
+  left: 30.75%;
+}
+/* 12 */
+.time-item:nth-child(5) {
+  top: 10%;
+  left: 50%;
+}
+/* 1 */
+.time-item:nth-child(6) {
+  top: 15.195%;
+  left: 69.25%;
+}
+/* 2 */
+.time-item:nth-child(7) {
+  top: 30%;
+  left: 84.65%;
+}
+/* 3 */
+.time-item:nth-child(8) {
+  top: 50%;
+  left: 90%;
+}
+/* 4 */
+.time-item:nth-child(9) {
+  top: 70%;
+  left: 84.65%;
+}
+
+.center {
+  height: 60%;
+  width: 60%;
+  position: relative;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background: lightgray;
+  border-radius: 50%;
+  text-align: center;
+}
+
+.time-item {
+  position: absolute;
+  height: 16%;
+  width: 16%;
+  background: tomato;
+  transition: all 0.4s;
+  border-radius: 50%;
+
+  align-items: center;
+  display: inline-block;
+  transform: translate(-50%, -50%);
+}
+
+/* :45 */
+.minute-item:first-child {
+  top: 70%;
+  left: 15.36%;
+}
+/* :00 */
+.minute-item:nth-child(2) {
+  top: 50%;
+  left: 10%;
+}
+/* :15 */
+.minute-item:nth-child(3) {
+  top: 30%;
+  left: 15.36%;
+}
+/* :30 */
+.minute-item:nth-child(4) {
+  top: 15.195%;
+  left: 30.75%;
+}
+
+.time-input {
+}
+
+.half-container {
+  display: inline-block;
+  vertical-align: top;
+}
+
+.half-container-left {
+}
+
+.half-container-right {
+}
