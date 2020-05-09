@@ -12,11 +12,13 @@ const SurveyForm = ({ userInfo: { firstName } }) => {
   return (
     <div className='survey-container'>
       <SurveyHeader name={firstName} />
-      <CurfewTime />
-      <ImportCalendar />
-      <SpecialCircumstances />
-      <Preferences />
-      <Locations />
+      <form action=''>
+        <CurfewTime />
+        <ImportCalendar />
+        <SpecialCircumstances />
+        <Preferences />
+        <Locations />
+      </form>
     </div>
   );
 };

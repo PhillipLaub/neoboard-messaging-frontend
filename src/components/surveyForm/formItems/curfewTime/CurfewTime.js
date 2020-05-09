@@ -8,15 +8,21 @@ const CurfewTime = () => {
     meridiem: 'PM',
   });
 
+  const timeInput = (e) => {
+    console.log(e.target.value);
+    let tempTime = time;
+    /*     tempTime.hour = value; */
+
+    /*     setTime(tempTime); */
+  };
+
   return (
     <div className='questionnaire-container'>
       <div className='questionnaire-title'>Curfew Time</div>
       <div className='curfew-time-container'>
         <div className='half-container half-container-left'>
           <div className='clock'>
-            <div class='time-item' onclick='timeSet()'>
-              8
-            </div>
+            <input value='8' class='time-item' onClick={timeInput} />
             <div class='time-item'>9</div>
             <div class='time-item'>10</div>
             <div class='time-item'>11</div>
@@ -36,6 +42,14 @@ const CurfewTime = () => {
         <div className='half-container half-container-right'>
           <div className='time-input'>
             {time.hour}:{time.minute} {time.meridiem}
+          </div>
+        </div>
+      </div>
+      <div className='checkbox'>
+        <div className='checkbox-container'>
+          <input type='checkbox' className='checkbox-input' />
+          <div className='checkbox-text'>
+            I have an erratic sleep schedule due to work
           </div>
         </div>
       </div>
