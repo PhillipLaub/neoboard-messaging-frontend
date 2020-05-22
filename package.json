@@ -8,6 +8,7 @@
     "@testing-library/user-event": "^7.2.1",
     "express": "^4.17.1",
     "linkedin-login-for-react": "^1.2.3",
+    "mysql": "^2.18.1",
     "oauth": "^0.9.15",
     "passport": "^0.4.1",
     "passport-linkedin-oauth2": "^2.0.0",

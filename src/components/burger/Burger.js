@@ -1,14 +1,14 @@
 // Burger.js
 import React from 'react';
-import { StyledBurger } from './Burger.styled';
+import './Burger.css';
 
 const Burger = () => {
   return (
-    <StyledBurger>
-      <div />
-      <div />
-      <div />
-    </StyledBurger>
+    <button className='burger-button'>
+      <div className='burger-div' />
+      <div className='burger-div' />
+      <div className='burger-div' />
+    </button>
   );
 };
 
