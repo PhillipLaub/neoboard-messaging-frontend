@@ -1,10 +1,6 @@
 import React, { Fragment, useState } from 'react';
 import './App.css';
 
-import { ThemeProvider } from 'styled-components';
-import { GlobalStyles } from './global';
-import { theme } from './theme';
-
 import { BrowserRouter as Router, Switch, Route, Link } from 'react-router-dom';
 
 import Navbar from './components/navbar/Navbar';
@@ -42,13 +38,10 @@ function App() {
 
   return (
     <div className='App'>
-      <ThemeProvider theme={theme}>
-        <Fragment>
-          <GlobalStyles />
-          <Navbar />
-          <OtherUser otherUserInfo={otherUserInfo} />
-        </Fragment>
-      </ThemeProvider>
+      <Fragment>
+        <Navbar />
+        <PrivateUser privateUserInfo={privateUserInfo} />
+      </Fragment>
     </div>
   );
 }

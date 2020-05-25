@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState, useEffect } from 'react';
 import './OtherUser.css';
 
 const OtherUser = ({
@@ -13,6 +13,11 @@ const OtherUser = ({
     city,
   },
 }) => {
+  const [user, setUser] = useState([]);
+  useEffect(() => {
+    fetch('/selectfrom').then((res) => setUser(res.data));
+  });
+
   return (
     <div className='user-container'>
       {/* This section is hard coded for now... */}
@@ -59,7 +64,7 @@ const OtherUser = ({
       {/*  */}
 
       <div className='basic-info'>
-        <div className='name center'>{name}</div>
+        <div className='name'>{name}</div>
         <div className='basic-info-item top-margin-buffer'>@{username}</div>
         <div className='basic-info-item top-margin-buffer'>
           Acing Exams since {joinDate}

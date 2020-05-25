@@ -4,8 +4,8 @@ import './User.css';
 const User = ({
   userInfo: {
     image,
-    firstname,
-    lastname,
+    firstName,
+    lastName,
     username,
     joinDate,
     college,
@@ -54,9 +54,9 @@ const User = ({
       </div>
 
       <div className='basic-info'>
-        <div className='name center'>
+        <div className='name'>
           {/* Currently online status indicator is green as if online, however, for the future, this will have to be coded to only do so if they are actually online */}
-          {firstname} {lastname} <i class='fas fa-circle green'></i>
+          {firstName} {lastName} <i class='fas fa-circle green'></i>
         </div>
         <div className='basic-info-item'>@{username}</div>
         <div className='basic-info-item'>Acing Exams since {joinDate}</div>

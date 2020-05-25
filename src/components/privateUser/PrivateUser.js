@@ -15,7 +15,7 @@ const User = ({
       </div>
 
       <div className='basic-info'>
-        <div className='name center'>
+        <div className='name'>
           {firstName} {lastName} <i class='fas fa-circle yellow no-shadow'></i>
         </div>
         <div className='basic-info-item top-margin-buffer'>
@@ -26,7 +26,7 @@ const User = ({
 
       <div className='private-info'>
         <div className='private-icon'>
-          <i class='fas fa-user-secret'></i>
+          <i className='fas fa-user-secret'></i>
         </div>
         <div className='private-message'>
           {firstName} has requested that their profile remain private

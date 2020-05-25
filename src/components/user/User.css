@@ -1,5 +1,5 @@
 .user-container {
-  padding: 1rem 0 1rem 0;
+  padding: 9rem 0 1rem 0;
   position: relative;
 }
 
@@ -44,7 +44,6 @@
   background: linear-gradient(0deg, #daf2f5, #daf2f5), #162d3f;
   border-radius: 15px;
   padding: 0.4rem 0.6rem;
-
   font-family: Quicksand;
   font-size: 1.6rem;
   line-height: 2rem;
@@ -136,12 +135,11 @@
 
 .return-footer {
   position: absolute;
-  bottom: 2rem;
+  bottom: -6rem;
   left: 50%;
   transform: translate(
-    -50%,
     -50%
-  ); /* The box will be shifted half it's width to the left and up, to allow for true centering */
+  ); /* The box will be shifted half it's width to the left to allow for true centering */
 }
 
 .return-button {
