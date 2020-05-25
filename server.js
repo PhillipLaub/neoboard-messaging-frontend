@@ -23,18 +23,28 @@ connection.connect((err) => {
 });
 
 app.get('/selectfrom', (req, res) => {
-  let sql = 'SELECT * FROM test;';
+  let sql = 'SELECT * FROM test WHERE username="DrFreeze459";';
   connection.query(sql, (err, results) => {
     if (err) throw err;
     console.log(results);
-    res.send('posts from test fetched');
+    res.send(results);
   });
+});
+
+app.get('/api/hello', (req, res) => {
+  res.send({ express: 'Hello From Express' });
+});
+
+app.post('/api/world', (req, res) => {
+  console.log(req.body);
+  res.send(
+    `I received your POST request. This is what you sent me: ${req.body.post}`
+  );
 });
 
 app.listen(PORT, function () {
   console.log(
     `==> 🌎  Listening on port ${PORT}. Visit http://localhost:${PORT}/ in your browser.`,
-    PORT,
     PORT
   );
 });

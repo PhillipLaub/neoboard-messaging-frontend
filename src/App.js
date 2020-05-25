@@ -46,7 +46,7 @@ function App() {
         <Fragment>
           <GlobalStyles />
           <Navbar />
-          <SurveyForm userInfo={userInfo} />
+          <OtherUser otherUserInfo={otherUserInfo} />
         </Fragment>
       </ThemeProvider>
     </div>
