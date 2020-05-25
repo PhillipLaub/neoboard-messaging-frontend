@@ -40,7 +40,7 @@ function App() {
     <div className='App'>
       <Fragment>
         <Navbar />
-        <PrivateUser privateUserInfo={privateUserInfo} />
+        <OtherUser otherUserInfo={otherUserInfo} />
       </Fragment>
     </div>
   );
