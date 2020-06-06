@@ -40,6 +40,7 @@ function App() {
     <div className='App'>
       <Fragment>
         <Navbar />
+        {/* Replace the below component with one of the others commented below the return to switch pages */}
         <OtherUser otherUserInfo={otherUserInfo} />
       </Fragment>
     </div>
