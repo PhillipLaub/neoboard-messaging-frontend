@@ -41,7 +41,11 @@ function App() {
       <Fragment>
         <Navbar />
         {/* Replace the below component with one of the others commented below the return to switch pages */}
-        <OtherUser otherUserInfo={otherUserInfo} />
+        <Messaging
+          comments={comments}
+          subject={channel}
+          newMessages={newMessages}
+        />
       </Fragment>
     </div>
   );
