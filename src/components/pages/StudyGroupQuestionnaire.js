@@ -1,5 +1,5 @@
 import React, { Fragment } from 'react';
-import Questions from '../studyGroupQuestions/StudyGroupQuestions';
+import Questions from '../studyGroupQuestionnaire/StudyGroupQuestions';
 
 const Messaging = ({ comments, subject, newMessages }) => {
   return (

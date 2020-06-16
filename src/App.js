@@ -24,6 +24,9 @@ import privateUserInfo from './data/privateUserInfo.json';
 // For survey form layout
 import SurveyForm from './components/surveyForm/SurveyForm';
 
+// For study group questionnaire layout
+import StudyGroupQuestionnaire from './components/pages/StudyGroupQuestionnaire';
+
 function App() {
   // For the messaging layout
   const [comments, setComments] = useState(userComments); // right now this is just dummy data for the comments to fill up biology channel
@@ -39,9 +42,9 @@ function App() {
   return (
     <div className='App'>
       <Fragment>
-        <Navbar />
+        {/*         <Navbar /> */}
         {/* Replace the below component with one of the others commented below the return to switch pages */}
-        <SurveyForm userInfo={userInfo} />
+        <StudyGroupQuestionnaire />
       </Fragment>
     </div>
   );

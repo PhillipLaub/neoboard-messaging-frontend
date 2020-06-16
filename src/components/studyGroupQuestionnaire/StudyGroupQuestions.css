@@ -1,0 +1,58 @@
+.study-group-questionnaire-container {
+  background-color: #edf6f7;
+  height: 100vh;
+  padding: 3rem 5rem;
+}
+
+.question-box {
+  background-color: #fff;
+  padding: 2.5rem 2rem;
+  border: 0.5px solid #dadce0;
+  border-radius: 8px;
+  box-shadow: 0 2px 1px -1px rgba(0, 0, 0, 0.2),
+    0 1px 1px 0 rgba(0, 0, 0, 0.141), 0 1px 3px 0 rgba(0, 0, 0, 0.122);
+}
+
+.questionnaire-header {
+  font: 400 1.6rem Roboto, RobotoDraft, Helvetica, Arial, sans-serif;
+
+  color: #202124;
+  font-size: 1.6rem;
+  font-weight: 400;
+  line-height: 135%;
+}
+
+.questionnaire-question {
+  font-family: 'Google Sans', Roboto, Arial, sans-serif;
+
+  font-size: 1.6rem;
+  font-weight: 500;
+  letter-spacing: 0.1px;
+  line-height: 2.4rem;
+  font-weight: 400;
+}
+
+.questionnaire-description {
+  font-family: Roboto, Arial, sans-serif;
+
+  font-size: 1.2rem;
+  font-weight: 400;
+  letter-spacing: 0.3px;
+  line-height: 1.6rem;
+  color: #202124;
+  min-height: 2rem;
+}
+
+.questionnaire-answer {
+  font-family: Roboto, Arial, sans-serif;
+
+  font-size: 1.4rem;
+  font-weight: 400;
+  letter-spacing: 0.2px;
+  line-height: 2rem;
+  color: #202124;
+}
+
+.required {
+  color: #d93025;
+}
