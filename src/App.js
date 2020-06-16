@@ -41,11 +41,7 @@ function App() {
       <Fragment>
         <Navbar />
         {/* Replace the below component with one of the others commented below the return to switch pages */}
-        <Messaging
-          comments={comments}
-          subject={channel}
-          newMessages={newMessages}
-        />
+        <SurveyForm userInfo={userInfo} />
       </Fragment>
     </div>
   );
