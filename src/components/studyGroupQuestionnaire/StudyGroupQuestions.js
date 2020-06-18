@@ -2,8 +2,30 @@ import React, { Fragment, useState } from 'react';
 import './StudyGroupQuestions.css';
 
 const StudyGroupQuestions = ({}) => {
-  let data = {};
+  let data = {
+    email: null,
+    fullName: null,
+    studyLocations: [],
+    latestSleepTime: null,
+    studyWithFriend: null,
+    studyWithPatientPerson: null,
+    studyWithExperiencedPerson: null,
+    studyWithOrganizedPerson: null,
+    studyWithSimilarPerson: null,
+    studyWithPunctualPerson: null,
+    mostImportantPreference: null,
+    friendsInClass: [],
+    excludeFromGrouping: [],
+    anonymous: null,
+    commuter: null,
+  };
+
   let commuter = null;
+
+  let commuterData = {
+    currentCity: null,
+    cityIfNotListed: null,
+  };
 
   return (
     <div className='study-group-questionnaire-container'>
@@ -54,7 +76,7 @@ const StudyGroupQuestions = ({}) => {
               type='radio'
               className='questionnaire-input'
               name='answer'
-              value='yes'
+              value={'yes'}
             />
             <label for='yes'>Yes</label>
           </div>
