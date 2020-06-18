@@ -1,6 +1,5 @@
 .study-group-questionnaire-container {
   background-color: #e7f6f7;
-  height: 100vh;
   padding: 3rem 5rem;
 }
 
@@ -17,8 +16,14 @@
   margin-bottom: 1rem;
 }
 
+.commuter-box {
+  background-color: #e7eaee;
+  margin-left: 1rem;
+}
+
 .questionnaire-top-border {
   border-top: 0.8rem solid #85d3d7;
+  padding: 1.5rem 2rem 2.5rem 2rem;
 }
 
 .questionnaire-header {
@@ -33,7 +38,7 @@
 .questionnaire-question {
   font-family: 'Cormorant Garamond', serif;
 
-  font-size: 1.2rem;
+  font-size: 1.3rem;
   font-weight: 400;
   letter-spacing: 0.1px;
   line-height: 2.4rem;
@@ -42,7 +47,7 @@
 .questionnaire-description {
   font-family: Roboto, Arial, sans-serif;
 
-  font-size: 1.2rem;
+  font-size: 0.9rem;
   font-weight: 400;
   letter-spacing: 0.3px;
   line-height: 1.6rem;
@@ -70,7 +75,7 @@
   border-bottom: 0.01rem solid #dadce0;
 }
 
-.questionnaire-input {
+.questionnaire-input[type='text'] {
   font-family: Roboto, Arial, sans-serif;
   font-size: 1rem;
 
@@ -78,7 +83,7 @@
   line-height: 20px;
   color: #70757a;
 
-  width: 50%;
+  width: 33.3%;
 
   border: none;
   border-bottom: 0.01rem dotted #70757a;
@@ -86,4 +91,43 @@
   display: block;
   outline: none;
   padding: 0.125rem 0;
+}
+
+.questionnaire-input::placeholder {
+  color: #9ba2a8;
+}
+
+.questionnaire-check-item {
+  max-height: 2.1rem;
+}
+
+.questionnaire-check-item .questionnaire-input[type='radio'],
+.questionnaire-check-item .questionnaire-input[type='checkbox'] {
+  margin: -1px 0.5rem 0 0;
+  display: inline-block;
+  vertical-align: middle;
+}
+
+.questionnaire-check-item label {
+  font-family: Roboto, Arial, sans-serif;
+  font-size: 0.9rem;
+  letter-spacing: 0.3px;
+  color: #202124;
+}
+
+@media only screen and (max-width: 400px) {
+  .study-group-questionnaire-container {
+    padding: 2rem 1rem;
+  }
+
+  .questionnaire-input[type='text'] {
+    width: 100%;
+  }
+
+  html {
+    /* This is being set for the purpose of easy rem calculations throughout the application */
+    /* Browser default size is 16px, but we want to set it to a percentage in case people with bad eyes have a different default */
+    /* The percentage is 62.5% because it equates to 10px assuming the 16px default */
+    font-size: 100%;
+  }
 }
