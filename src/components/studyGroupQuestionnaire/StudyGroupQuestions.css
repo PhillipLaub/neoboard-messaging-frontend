@@ -7,7 +7,6 @@
   background-color: #fff;
   padding: 2.5rem 2rem;
 
-  border: 0.3px solid #dadce0;
   border-radius: 8px;
 
   box-shadow: 0 2px 1px -1px rgba(0, 0, 0, 0.2),
@@ -17,13 +16,18 @@
 }
 
 .commuter-box {
-  background-color: #e7eaee;
   margin-left: 1rem;
+  margin-right: 1rem;
 }
 
 .questionnaire-top-border {
   border-top: 0.8rem solid #85d3d7;
   padding: 1.5rem 2rem 2.5rem 2rem;
+}
+
+.questionnaire-left-border {
+  border-left: 0.8rem solid #85d3d7;
+  padding: 2rem 2.5rem 2rem 2rem;
 }
 
 .questionnaire-header {
@@ -42,6 +46,17 @@
   font-weight: 400;
   letter-spacing: 0.1px;
   line-height: 2.4rem;
+}
+
+.questionnaire-question select {
+  margin-top: 0.5rem;
+  padding-bottom: 0.1rem;
+  font-family: Roboto, Arial, sans-serif;
+  width: 25%;
+  font-size: 1rem;
+  font-weight: 400;
+  color: #202124;
+  display: block;
 }
 
 .questionnaire-description {
@@ -67,6 +82,10 @@
 
 .required {
   color: #d93025;
+}
+
+.display-block {
+  display: block;
 }
 
 .questionnaire-break {
@@ -115,13 +134,67 @@
   color: #202124;
 }
 
+.input-importance {
+  margin: 0 2rem 0 2rem;
+  display: flex;
+  align-items: flex-end; /* flex-end makes all contents align starting at the end of the container, so it allowed for the importance level text of the radio bubbles to align by the buttons rather than values */
+}
+
+.questionnaire-horizontal-check-container {
+  padding: 0.5rem 0 1rem 0;
+  display: flex;
+  justify-content: center;
+}
+
+.questionnaire-horizontal-check-item {
+  display: inline-block;
+  position: relative;
+}
+
+.questionnaire-horizontal-check-item
+  .questionnaire-horizontal-input[type='radio'] {
+  margin: 1rem 2rem 0 2rem;
+  display: inline;
+  vertical-align: middle;
+}
+
+.questionnaire-horizontal-check-item label {
+  position: absolute;
+  left: 50%;
+  transform: translate(-50%);
+}
+
 @media only screen and (max-width: 400px) {
+  .questionnaire-box {
+    text-align: center;
+  }
+
+  .questionnaire-question {
+    text-align: left;
+  }
+
   .study-group-questionnaire-container {
     padding: 2rem 1rem;
   }
 
   .questionnaire-input[type='text'] {
     width: 100%;
+    margin-top: 0.5rem;
+  }
+
+  .questionnaire-horizontal-check-item
+    .questionnaire-horizontal-input[type='radio'] {
+    margin: 0.1rem 0.4rem 0 0.4rem;
+    display: inline;
+    vertical-align: middle;
+  }
+
+  .input-importance {
+    max-width: 45px;
+    font-size: 0.8rem;
+    margin: 0 0.2rem 0 0.2rem;
+    display: flex;
+    align-items: flex-end; /* flex-end makes all contents align starting at the end of the container, so it allowed for the importance level text of the radio bubbles to align by the buttons rather than values */
   }
 
   html {

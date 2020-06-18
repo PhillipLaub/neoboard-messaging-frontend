@@ -20,11 +20,20 @@ const StudyGroupQuestions = ({}) => {
     commuter: null,
   };
 
-  let commuter = null;
+  const [commuter, setCommuter] = useState(null);
 
   let commuterData = {
     currentCity: null,
     cityIfNotListed: null,
+  };
+
+  const handleTrueFalseRadioClick = (e) => {
+    setCommuter('true' === e.target.value);
+  };
+
+  const handleRadioScaleClick = (e) => {
+    data[e.target.name] = parseInt(e.target.value);
+    console.log(data);
   };
 
   return (
@@ -49,7 +58,6 @@ const StudyGroupQuestions = ({}) => {
           ></input>
         </div>
       </div>
-
       {/* Box 2 */}
       <div className='questionnaire-box'>
         <div className='questionnaire-question'>
@@ -61,11 +69,10 @@ const StudyGroupQuestions = ({}) => {
           ></input>
         </div>
       </div>
-
       {/* Box 3 */}
       <div className='questionnaire-box'>
         <div className='questionnaire-question'>
-          Are you a commuter? <span className='required'>*</span>
+          Are you a commuter? <span className='required'> *</span>
           <div className='questionnaire-description'>
             If you are not sure, the best way to tell is if you could reasonably
             walk to campus or not (i.e. live on campus), or if you need a car to
@@ -75,8 +82,9 @@ const StudyGroupQuestions = ({}) => {
             <input
               type='radio'
               className='questionnaire-input'
-              name='answer'
-              value={'yes'}
+              name='no'
+              value='true'
+              onClick={handleTrueFalseRadioClick}
             />
             <label for='yes'>Yes</label>
           </div>
@@ -84,18 +92,85 @@ const StudyGroupQuestions = ({}) => {
             <input
               type='radio'
               className='questionnaire-input'
-              name='answer'
-              value='no'
+              name='no'
+              value='false'
+              onClick={handleTrueFalseRadioClick}
             />
             <label for='no'>No</label>
           </div>
         </div>
       </div>
+      {commuter && (
+        <Fragment>
+          {/* Box 4 */}
+          <div className='questionnaire-box commuter-box questionnaire-left-border'>
+            <div className='questionnaire-question'>
+              Please provide us the city you currently reside at:
+              <span className='required'> *</span>
+              <select>
+                <option value='NOT LISTED'>Not Listed</option>
+                <option value='Azusa'>Azusa</option>
+                <option value='Banning'>Banning</option>
+                <option value='Beaumont'>Beaumont</option>
+                <option value='Brea'>Brea</option>
+                <option value='Chino'>Chino</option>
+                <option value='Claremont'>Claremont</option>
+                <option value='Colton'>Colton</option>
+                <option value='Corona'>Corona</option>
+                <option value='Covina'>Covina</option>
+                <option value='Diamond Bar'>Diamond Bar</option>
+                <option value='Eastvale'>Eastvale</option>
+                <option value='Fontana'>Fontana</option>
+                <option value='Glendora'>Glendora</option>
+                <option value='Hesperia'>Hesperia</option>
+                <option value='Irvine'>Irvine</option>
+                <option value='Jurupa Valley'>Jurupa Valley</option>
+                <option value='Lake Elsinore'>Lake Elsinore</option>
+                <option value='Menifee'>Menifee</option>
+                <option value='Montclair'>Montclair</option>
+                <option value='Moreno Valley'>Moreno Valley</option>
+                <option value='Murrieta'>Murrieta</option>
+                <option value='Newport Beach'>Newport Beach</option>
+                <option value='Norco'>Norco</option>
+                <option value='Ontario'>Ontario</option>
+                <option value='Perris'>Perris</option>
+                <option value='Placentia'>Placentia</option>
+                <option value='Pomona'>Pomona</option>
+                <option value='Rancho Cucamonga'>Rancho Cucamonga</option>
+                <option value='Redlands'>Redlands</option>
+                <option value='Riverside'>Riverside</option>
+                <option value='Rialto'>Rialto</option>
+                <option value='Rowland Heights'>Rowland Heights</option>
+                <option value='San Bernardino'>San Bernardino</option>
+                <option value='San Dimas'>San Dimas</option>
+                <option value='Temecula'>Temecula</option>
+                <option value='Upland'>Upland</option>
+                <option value='Victorville'>Victorville</option>
+                <option value='Walnut'>Walnut</option>
+                <option value='West Covina'>West Covina</option>
+              </select>
+            </div>
+          </div>
 
-      {/* Box 4 */}
+          {/* Box 5 */}
+          <div className='questionnaire-box commuter-box questionnaire-left-border'>
+            <div className='questionnaire-question'>
+              If city is not listed, please type the name of the city below
+              <span className='required'> *</span>
+              <input
+                type='text'
+                placeholder='City name'
+                className='questionnaire-input'
+              ></input>
+            </div>
+          </div>
+        </Fragment>
+      )}
+
+      {/* Box 6 */}
       <div className='questionnaire-box'>
         <div className='questionnaire-question'>
-          Where do you prefer to study? <span className='required'>*</span>
+          Where do you prefer to study? <span className='required'> *</span>
           <div className='questionnaire-check-item'>
             <input
               type='checkbox'
@@ -137,36 +212,93 @@ const StudyGroupQuestions = ({}) => {
         </div>
       </div>
 
-      {commuter && (
-        <Fragment>
-          {/* Box 5 */}
-          <div className='questionnaire-box commuter-box questionnaire-top-border'>
-            <div className='questionnaire-question'>
-              Please provide us the city you currently reside at:
-              <span className='required'>*</span>
-              <select>
-                <option selected value='NOT LISTED'></option>
-                <option value=''></option>
-                <option value=''></option>
-                <option value=''></option>
-              </select>
-            </div>
+      <div className='questionnaire-box'>
+        <div className='questionnaire-question display-block'>
+          Studying with someone who I already know/friend of mine
+          <span className='required'> *</span>
+        </div>
+        <div className='questionnaire-horizontal-check-container'>
+          <div className='input-importance'>Not at all</div>
+          <div className='questionnaire-horizontal-check-item'>
+            <label for='1'>1</label>
+            <br />
+            <input
+              type='radio'
+              className='questionnaire-horizontal-input'
+              name='studyWithFriend'
+              value='1'
+              onClick={handleRadioScaleClick}
+            />
           </div>
-
-          {/* Box 6 */}
-          <div className='questionnaire-box commuter-box'>
-            <div className='questionnaire-question'>
-              If city is not listed, please type the name of the city below
-              <span className='required'>*</span>
-              <input
-                type='text'
-                placeholder='Short answer text'
-                className='questionnaire-input'
-              ></input>
-            </div>
+          <div className='questionnaire-horizontal-check-item'>
+            <label for='2'>2</label>
+            <br />
+            <input
+              type='radio'
+              className='questionnaire-horizontal-input'
+              name='studyWithFriend'
+              value='2'
+              onClick={handleRadioScaleClick}
+            />
           </div>
-        </Fragment>
-      )}
+          <div className='questionnaire-horizontal-check-item'>
+            <label for='3'>3</label>
+            <br />
+            <input
+              type='radio'
+              className='questionnaire-horizontal-input'
+              name='studyWithFriend'
+              value='3'
+              onClick={handleRadioScaleClick}
+            />
+          </div>
+          <div className='questionnaire-horizontal-check-item'>
+            <label for='4'>4</label>
+            <br />
+            <input
+              type='radio'
+              className='questionnaire-horizontal-input'
+              name='studyWithFriend'
+              value='4'
+              onClick={handleRadioScaleClick}
+            />
+          </div>
+          <div className='questionnaire-horizontal-check-item'>
+            <label for='5'>5</label>
+            <br />
+            <input
+              type='radio'
+              className='questionnaire-horizontal-input'
+              name='studyWithFriend'
+              value='5'
+              onClick={handleRadioScaleClick}
+            />
+          </div>
+          <div className='questionnaire-horizontal-check-item'>
+            <label for='6'>6</label>
+            <br />
+            <input
+              type='radio'
+              className='questionnaire-horizontal-input'
+              name='studyWithFriend'
+              value='6'
+              onClick={handleRadioScaleClick}
+            />
+          </div>
+          <div className='questionnaire-horizontal-check-item'>
+            <label for='7'>7</label>
+            <br />
+            <input
+              type='radio'
+              className='questionnaire-horizontal-input'
+              name='studyWithFriend'
+              value='7'
+              onClick={handleRadioScaleClick}
+            />
+          </div>
+          <div className='input-importance'>Most Important</div>
+        </div>
+      </div>
     </div>
   );
 };
