@@ -215,6 +215,19 @@ const StudyGroupQuestions = ({}) => {
       </div>
 
       {/* Box 7 */}
+      <div className='questionnaire-box'>
+        <div className='questionnaire-question'>
+          Approximately what time is the latest you normally go to sleep?
+          <span className='required'>*</span>
+          <input
+            type='time'
+            placeholder='Name'
+            className='questionnaire-input display-block'
+          ></input>
+        </div>
+      </div>
+
+      {/* Box 8 */}
       <div className='questionnaire-box description-box'>
         <div className='questionnaire-question italic'>
           For the questions below, score from 1 to 7 the important attributes of
@@ -222,7 +235,452 @@ const StudyGroupQuestions = ({}) => {
         </div>
       </div>
 
-      {/* Box 8 */}
+      {/* Box 9 */}
+      <div className='questionnaire-box'>
+        <div className='questionnaire-question display-block'>
+          Studying with someone who I already know/friend of mine
+          <span className='required'> *</span>
+        </div>
+        <div className='questionnaire-horizontal-check-container'>
+          <div className='input-importance'>Not Important</div>
+          <div className='questionnaire-horizontal-check-item'>
+            <label for='1'>1</label>
+            <br />
+            <input
+              type='radio'
+              className='questionnaire-horizontal-input'
+              name='studyWithFriend'
+              value='1'
+              onClick={handleRadioScaleClick}
+            />
+          </div>
+          <div className='questionnaire-horizontal-check-item'>
+            <label for='2'>2</label>
+            <br />
+            <input
+              type='radio'
+              className='questionnaire-horizontal-input'
+              name='studyWithFriend'
+              value='2'
+              onClick={handleRadioScaleClick}
+            />
+          </div>
+          <div className='questionnaire-horizontal-check-item'>
+            <label for='3'>3</label>
+            <br />
+            <input
+              type='radio'
+              className='questionnaire-horizontal-input'
+              name='studyWithFriend'
+              value='3'
+              onClick={handleRadioScaleClick}
+            />
+          </div>
+          <div className='questionnaire-horizontal-check-item'>
+            <label for='4'>4</label>
+            <br />
+            <input
+              type='radio'
+              className='questionnaire-horizontal-input'
+              name='studyWithFriend'
+              value='4'
+              onClick={handleRadioScaleClick}
+            />
+          </div>
+          <div className='questionnaire-horizontal-check-item'>
+            <label for='5'>5</label>
+            <br />
+            <input
+              type='radio'
+              className='questionnaire-horizontal-input'
+              name='studyWithFriend'
+              value='5'
+              onClick={handleRadioScaleClick}
+            />
+          </div>
+          <div className='questionnaire-horizontal-check-item'>
+            <label for='6'>6</label>
+            <br />
+            <input
+              type='radio'
+              className='questionnaire-horizontal-input'
+              name='studyWithFriend'
+              value='6'
+              onClick={handleRadioScaleClick}
+            />
+          </div>
+          <div className='questionnaire-horizontal-check-item'>
+            <label for='7'>7</label>
+            <br />
+            <input
+              type='radio'
+              className='questionnaire-horizontal-input'
+              name='studyWithFriend'
+              value='7'
+              onClick={handleRadioScaleClick}
+            />
+          </div>
+          <div className='input-importance'>Very Important</div>
+        </div>
+      </div>
+
+      {/* Box 10 */}
+      <div className='questionnaire-box'>
+        <div className='questionnaire-question display-block'>
+          Studying with someone who I already know/friend of mine
+          <span className='required'> *</span>
+        </div>
+        <div className='questionnaire-horizontal-check-container'>
+          <div className='input-importance'>Not Important</div>
+          <div className='questionnaire-horizontal-check-item'>
+            <label for='1'>1</label>
+            <br />
+            <input
+              type='radio'
+              className='questionnaire-horizontal-input'
+              name='studyWithFriend'
+              value='1'
+              onClick={handleRadioScaleClick}
+            />
+          </div>
+          <div className='questionnaire-horizontal-check-item'>
+            <label for='2'>2</label>
+            <br />
+            <input
+              type='radio'
+              className='questionnaire-horizontal-input'
+              name='studyWithFriend'
+              value='2'
+              onClick={handleRadioScaleClick}
+            />
+          </div>
+          <div className='questionnaire-horizontal-check-item'>
+            <label for='3'>3</label>
+            <br />
+            <input
+              type='radio'
+              className='questionnaire-horizontal-input'
+              name='studyWithFriend'
+              value='3'
+              onClick={handleRadioScaleClick}
+            />
+          </div>
+          <div className='questionnaire-horizontal-check-item'>
+            <label for='4'>4</label>
+            <br />
+            <input
+              type='radio'
+              className='questionnaire-horizontal-input'
+              name='studyWithFriend'
+              value='4'
+              onClick={handleRadioScaleClick}
+            />
+          </div>
+          <div className='questionnaire-horizontal-check-item'>
+            <label for='5'>5</label>
+            <br />
+            <input
+              type='radio'
+              className='questionnaire-horizontal-input'
+              name='studyWithFriend'
+              value='5'
+              onClick={handleRadioScaleClick}
+            />
+          </div>
+          <div className='questionnaire-horizontal-check-item'>
+            <label for='6'>6</label>
+            <br />
+            <input
+              type='radio'
+              className='questionnaire-horizontal-input'
+              name='studyWithFriend'
+              value='6'
+              onClick={handleRadioScaleClick}
+            />
+          </div>
+          <div className='questionnaire-horizontal-check-item'>
+            <label for='7'>7</label>
+            <br />
+            <input
+              type='radio'
+              className='questionnaire-horizontal-input'
+              name='studyWithFriend'
+              value='7'
+              onClick={handleRadioScaleClick}
+            />
+          </div>
+          <div className='input-importance'>Very Important</div>
+        </div>
+      </div>
+
+      {/* Box 11 */}
+      <div className='questionnaire-box'>
+        <div className='questionnaire-question display-block'>
+          Studying with someone who I already know/friend of mine
+          <span className='required'> *</span>
+        </div>
+        <div className='questionnaire-horizontal-check-container'>
+          <div className='input-importance'>Not Important</div>
+          <div className='questionnaire-horizontal-check-item'>
+            <label for='1'>1</label>
+            <br />
+            <input
+              type='radio'
+              className='questionnaire-horizontal-input'
+              name='studyWithFriend'
+              value='1'
+              onClick={handleRadioScaleClick}
+            />
+          </div>
+          <div className='questionnaire-horizontal-check-item'>
+            <label for='2'>2</label>
+            <br />
+            <input
+              type='radio'
+              className='questionnaire-horizontal-input'
+              name='studyWithFriend'
+              value='2'
+              onClick={handleRadioScaleClick}
+            />
+          </div>
+          <div className='questionnaire-horizontal-check-item'>
+            <label for='3'>3</label>
+            <br />
+            <input
+              type='radio'
+              className='questionnaire-horizontal-input'
+              name='studyWithFriend'
+              value='3'
+              onClick={handleRadioScaleClick}
+            />
+          </div>
+          <div className='questionnaire-horizontal-check-item'>
+            <label for='4'>4</label>
+            <br />
+            <input
+              type='radio'
+              className='questionnaire-horizontal-input'
+              name='studyWithFriend'
+              value='4'
+              onClick={handleRadioScaleClick}
+            />
+          </div>
+          <div className='questionnaire-horizontal-check-item'>
+            <label for='5'>5</label>
+            <br />
+            <input
+              type='radio'
+              className='questionnaire-horizontal-input'
+              name='studyWithFriend'
+              value='5'
+              onClick={handleRadioScaleClick}
+            />
+          </div>
+          <div className='questionnaire-horizontal-check-item'>
+            <label for='6'>6</label>
+            <br />
+            <input
+              type='radio'
+              className='questionnaire-horizontal-input'
+              name='studyWithFriend'
+              value='6'
+              onClick={handleRadioScaleClick}
+            />
+          </div>
+          <div className='questionnaire-horizontal-check-item'>
+            <label for='7'>7</label>
+            <br />
+            <input
+              type='radio'
+              className='questionnaire-horizontal-input'
+              name='studyWithFriend'
+              value='7'
+              onClick={handleRadioScaleClick}
+            />
+          </div>
+          <div className='input-importance'>Very Important</div>
+        </div>
+      </div>
+
+      {/* Box 12 */}
+      <div className='questionnaire-box'>
+        <div className='questionnaire-question display-block'>
+          Studying with someone who I already know/friend of mine
+          <span className='required'> *</span>
+        </div>
+        <div className='questionnaire-horizontal-check-container'>
+          <div className='input-importance'>Not Important</div>
+          <div className='questionnaire-horizontal-check-item'>
+            <label for='1'>1</label>
+            <br />
+            <input
+              type='radio'
+              className='questionnaire-horizontal-input'
+              name='studyWithFriend'
+              value='1'
+              onClick={handleRadioScaleClick}
+            />
+          </div>
+          <div className='questionnaire-horizontal-check-item'>
+            <label for='2'>2</label>
+            <br />
+            <input
+              type='radio'
+              className='questionnaire-horizontal-input'
+              name='studyWithFriend'
+              value='2'
+              onClick={handleRadioScaleClick}
+            />
+          </div>
+          <div className='questionnaire-horizontal-check-item'>
+            <label for='3'>3</label>
+            <br />
+            <input
+              type='radio'
+              className='questionnaire-horizontal-input'
+              name='studyWithFriend'
+              value='3'
+              onClick={handleRadioScaleClick}
+            />
+          </div>
+          <div className='questionnaire-horizontal-check-item'>
+            <label for='4'>4</label>
+            <br />
+            <input
+              type='radio'
+              className='questionnaire-horizontal-input'
+              name='studyWithFriend'
+              value='4'
+              onClick={handleRadioScaleClick}
+            />
+          </div>
+          <div className='questionnaire-horizontal-check-item'>
+            <label for='5'>5</label>
+            <br />
+            <input
+              type='radio'
+              className='questionnaire-horizontal-input'
+              name='studyWithFriend'
+              value='5'
+              onClick={handleRadioScaleClick}
+            />
+          </div>
+          <div className='questionnaire-horizontal-check-item'>
+            <label for='6'>6</label>
+            <br />
+            <input
+              type='radio'
+              className='questionnaire-horizontal-input'
+              name='studyWithFriend'
+              value='6'
+              onClick={handleRadioScaleClick}
+            />
+          </div>
+          <div className='questionnaire-horizontal-check-item'>
+            <label for='7'>7</label>
+            <br />
+            <input
+              type='radio'
+              className='questionnaire-horizontal-input'
+              name='studyWithFriend'
+              value='7'
+              onClick={handleRadioScaleClick}
+            />
+          </div>
+          <div className='input-importance'>Very Important</div>
+        </div>
+      </div>
+
+      {/* Box 13 */}
+      <div className='questionnaire-box'>
+        <div className='questionnaire-question display-block'>
+          Studying with someone who I already know/friend of mine
+          <span className='required'> *</span>
+        </div>
+        <div className='questionnaire-horizontal-check-container'>
+          <div className='input-importance'>Not Important</div>
+          <div className='questionnaire-horizontal-check-item'>
+            <label for='1'>1</label>
+            <br />
+            <input
+              type='radio'
+              className='questionnaire-horizontal-input'
+              name='studyWithFriend'
+              value='1'
+              onClick={handleRadioScaleClick}
+            />
+          </div>
+          <div className='questionnaire-horizontal-check-item'>
+            <label for='2'>2</label>
+            <br />
+            <input
+              type='radio'
+              className='questionnaire-horizontal-input'
+              name='studyWithFriend'
+              value='2'
+              onClick={handleRadioScaleClick}
+            />
+          </div>
+          <div className='questionnaire-horizontal-check-item'>
+            <label for='3'>3</label>
+            <br />
+            <input
+              type='radio'
+              className='questionnaire-horizontal-input'
+              name='studyWithFriend'
+              value='3'
+              onClick={handleRadioScaleClick}
+            />
+          </div>
+          <div className='questionnaire-horizontal-check-item'>
+            <label for='4'>4</label>
+            <br />
+            <input
+              type='radio'
+              className='questionnaire-horizontal-input'
+              name='studyWithFriend'
+              value='4'
+              onClick={handleRadioScaleClick}
+            />
+          </div>
+          <div className='questionnaire-horizontal-check-item'>
+            <label for='5'>5</label>
+            <br />
+            <input
+              type='radio'
+              className='questionnaire-horizontal-input'
+              name='studyWithFriend'
+              value='5'
+              onClick={handleRadioScaleClick}
+            />
+          </div>
+          <div className='questionnaire-horizontal-check-item'>
+            <label for='6'>6</label>
+            <br />
+            <input
+              type='radio'
+              className='questionnaire-horizontal-input'
+              name='studyWithFriend'
+              value='6'
+              onClick={handleRadioScaleClick}
+            />
+          </div>
+          <div className='questionnaire-horizontal-check-item'>
+            <label for='7'>7</label>
+            <br />
+            <input
+              type='radio'
+              className='questionnaire-horizontal-input'
+              name='studyWithFriend'
+              value='7'
+              onClick={handleRadioScaleClick}
+            />
+          </div>
+          <div className='input-importance'>Very Important</div>
+        </div>
+      </div>
+
+      {/* Box 14 */}
       <div className='questionnaire-box'>
         <div className='questionnaire-question display-block'>
           Studying with someone who I already know/friend of mine

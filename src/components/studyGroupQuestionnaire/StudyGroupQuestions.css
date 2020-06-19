@@ -155,6 +155,22 @@
   color: #202124;
 }
 
+.questionnaire-input[type='time'] {
+  font-family: Roboto, Arial, sans-serif;
+  width: 25%;
+  font-size: 1.3rem;
+  font-weight: 400;
+  color: #202124;
+
+  letter-spacing: 1px;
+  line-height: 20px;
+
+  border: 0.01rem dotted #70757a;
+  border-radius: 8px;
+  padding: 0.2rem 2rem;
+  margin-top: 0.5rem;
+}
+
 .input-importance {
   text-align: center;
   margin: 0 2rem 0 2rem;
@@ -221,6 +237,12 @@
     margin: 0 0.2rem 0 0.2rem;
     display: flex;
     align-items: flex-end; /* flex-end makes all contents align starting at the end of the container, so it allowed for the importance level text of the radio bubbles to align by the buttons rather than values */
+  }
+
+  .questionnaire-input[type='time'] {
+    text-align: center;
+    width: 80%;
+    margin: 0.5rem auto 0 auto;
   }
 
   html {
