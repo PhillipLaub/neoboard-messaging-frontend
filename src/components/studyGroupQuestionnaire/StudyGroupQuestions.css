@@ -15,6 +15,15 @@
   margin-bottom: 1rem;
 }
 
+.description-box {
+  text-align: center;
+  margin-top: 2.5rem;
+  padding: 1rem 0.5rem;
+  margin-left: 0.5rem;
+  margin-right: 0.5rem;
+  border-top: 0.5rem solid #85d3d7;
+}
+
 .commuter-box {
   margin-left: 1rem;
   margin-right: 1rem;
@@ -22,7 +31,7 @@
 
 .questionnaire-top-border {
   border-top: 0.8rem solid #85d3d7;
-  padding: 1.5rem 2rem 2.5rem 2rem;
+  padding-top: 1.5rem;
 }
 
 .questionnaire-left-border {
@@ -88,6 +97,18 @@
   display: block;
 }
 
+.float-left {
+  float: left;
+}
+
+.float-right {
+  float: right;
+}
+
+.italic {
+  font-style: italic;
+}
+
 .questionnaire-break {
   margin: 0.5rem 0;
   border: none;
@@ -135,6 +156,7 @@
 }
 
 .input-importance {
+  text-align: center;
   margin: 0 2rem 0 2rem;
   display: flex;
   align-items: flex-end; /* flex-end makes all contents align starting at the end of the container, so it allowed for the importance level text of the radio bubbles to align by the buttons rather than values */
@@ -164,6 +186,10 @@
   transform: translate(-50%);
 }
 
+/*  */
+/*  */
+/*  */
+
 @media only screen and (max-width: 400px) {
   .questionnaire-box {
     text-align: center;
@@ -191,7 +217,7 @@
 
   .input-importance {
     max-width: 45px;
-    font-size: 0.8rem;
+    font-size: 0.5rem;
     margin: 0 0.2rem 0 0.2rem;
     display: flex;
     align-items: flex-end; /* flex-end makes all contents align starting at the end of the container, so it allowed for the importance level text of the radio bubbles to align by the buttons rather than values */

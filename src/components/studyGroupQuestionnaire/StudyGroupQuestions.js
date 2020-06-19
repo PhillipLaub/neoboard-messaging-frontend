@@ -58,6 +58,7 @@ const StudyGroupQuestions = ({}) => {
           ></input>
         </div>
       </div>
+
       {/* Box 2 */}
       <div className='questionnaire-box'>
         <div className='questionnaire-question'>
@@ -69,6 +70,7 @@ const StudyGroupQuestions = ({}) => {
           ></input>
         </div>
       </div>
+
       {/* Box 3 */}
       <div className='questionnaire-box'>
         <div className='questionnaire-question'>
@@ -212,13 +214,22 @@ const StudyGroupQuestions = ({}) => {
         </div>
       </div>
 
+      {/* Box 7 */}
+      <div className='questionnaire-box description-box'>
+        <div className='questionnaire-question italic'>
+          For the questions below, score from 1 to 7 the important attributes of
+          a study partner/group below
+        </div>
+      </div>
+
+      {/* Box 8 */}
       <div className='questionnaire-box'>
         <div className='questionnaire-question display-block'>
           Studying with someone who I already know/friend of mine
           <span className='required'> *</span>
         </div>
         <div className='questionnaire-horizontal-check-container'>
-          <div className='input-importance'>Not at all</div>
+          <div className='input-importance'>Not Important</div>
           <div className='questionnaire-horizontal-check-item'>
             <label for='1'>1</label>
             <br />
@@ -296,7 +307,7 @@ const StudyGroupQuestions = ({}) => {
               onClick={handleRadioScaleClick}
             />
           </div>
-          <div className='input-importance'>Most Important</div>
+          <div className='input-importance'>Very Important</div>
         </div>
       </div>
     </div>
