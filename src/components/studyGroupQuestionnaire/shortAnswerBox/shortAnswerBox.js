@@ -7,9 +7,10 @@ const shortAnswerBox = ({
   storageKey,
   func,
   required,
+  boxStyleModifier,
 }) => {
   return (
-    <div className='questionnaire-box'>
+    <div className={'questionnaire-box ' + boxStyleModifier}>
       <div className='questionnaire-question'>
         {question} {required && <span className='required'>*</span>}
         {description && (

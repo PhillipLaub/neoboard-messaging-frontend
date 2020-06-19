@@ -9,7 +9,7 @@ const radioScaleBox = ({ question, storageKey, func, required }) => {
       <div className='questionnaire-horizontal-check-container'>
         <div className='input-importance'>Not Important</div>
         <div className='questionnaire-horizontal-check-item'>
-          <label for='1'>1</label>
+          <label htmlFor='1'>1</label>
           <br />
           <input
             type='radio'
@@ -20,7 +20,7 @@ const radioScaleBox = ({ question, storageKey, func, required }) => {
           />
         </div>
         <div className='questionnaire-horizontal-check-item'>
-          <label for='2'>2</label>
+          <label htmlFor='2'>2</label>
           <br />
           <input
             type='radio'
@@ -31,7 +31,7 @@ const radioScaleBox = ({ question, storageKey, func, required }) => {
           />
         </div>
         <div className='questionnaire-horizontal-check-item'>
-          <label for='3'>3</label>
+          <label htmlFor='3'>3</label>
           <br />
           <input
             type='radio'
@@ -42,7 +42,7 @@ const radioScaleBox = ({ question, storageKey, func, required }) => {
           />
         </div>
         <div className='questionnaire-horizontal-check-item'>
-          <label for='4'>4</label>
+          <label htmlFor='4'>4</label>
           <br />
           <input
             type='radio'
@@ -53,7 +53,7 @@ const radioScaleBox = ({ question, storageKey, func, required }) => {
           />
         </div>
         <div className='questionnaire-horizontal-check-item'>
-          <label for='5'>5</label>
+          <label htmlFor='5'>5</label>
           <br />
           <input
             type='radio'
@@ -64,7 +64,7 @@ const radioScaleBox = ({ question, storageKey, func, required }) => {
           />
         </div>
         <div className='questionnaire-horizontal-check-item'>
-          <label for='6'>6</label>
+          <label htmlFor='6'>6</label>
           <br />
           <input
             type='radio'
@@ -75,7 +75,7 @@ const radioScaleBox = ({ question, storageKey, func, required }) => {
           />
         </div>
         <div className='questionnaire-horizontal-check-item'>
-          <label for='7'>7</label>
+          <label htmlFor='7'>7</label>
           <br />
           <input
             type='radio'

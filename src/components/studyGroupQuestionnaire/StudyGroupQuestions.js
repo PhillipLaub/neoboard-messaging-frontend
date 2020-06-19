@@ -5,8 +5,9 @@ import ShortAnswerBox from './shortAnswerBox/shortAnswerBox';
 import RadioScaleBox from './radioScaleBox/radioScaleBox';
 import DescriptionBox from './descriptionBox/descriptionBox';
 import TimeInputBox from './timeInputBox/timeInputBox';
+import DropdownInputBox from './dropdownInputBox/dropdownInputBox';
 
-const StudyGroupQuestions = ({}) => {
+const StudyGroupQuestions = () => {
   let data = {
     email: null,
     fullName: null,
@@ -19,8 +20,8 @@ const StudyGroupQuestions = ({}) => {
     studyWithSimilarPerson: null,
     studyWithPunctualPerson: null,
     mostImportantPreference: null,
-    friendsInClass: [],
-    excludeFromGrouping: [],
+    friendsInClass: null,
+    excludeFromGrouping: null,
     anonymous: null,
     commuter: null,
     currentCity: null,
@@ -93,7 +94,7 @@ const StudyGroupQuestions = ({}) => {
               value='true'
               onClick={handleTrueFalseRadioClick}
             />
-            <label for='yes'>Yes</label>
+            <label htmlFor='yes'>Yes</label>
           </div>
           <div className='questionnaire-check-item'>
             <input
@@ -103,74 +104,74 @@ const StudyGroupQuestions = ({}) => {
               value='false'
               onClick={handleTrueFalseRadioClick}
             />
-            <label for='no'>No</label>
+            <label htmlFor='no'>No</label>
           </div>
         </div>
       </div>
       {commuter && (
         <Fragment>
           {/* Box 4 */}
-          <div className='questionnaire-box commuter-box questionnaire-left-border'>
-            <div className='questionnaire-question'>
-              Please provide us the city you currently reside at:
-              <span className='required'> *</span>
-              <select>
-                <option value='NOT LISTED'>Not Listed</option>
-                <option value='Azusa'>Azusa</option>
-                <option value='Banning'>Banning</option>
-                <option value='Beaumont'>Beaumont</option>
-                <option value='Brea'>Brea</option>
-                <option value='Chino'>Chino</option>
-                <option value='Claremont'>Claremont</option>
-                <option value='Colton'>Colton</option>
-                <option value='Corona'>Corona</option>
-                <option value='Covina'>Covina</option>
-                <option value='Diamond Bar'>Diamond Bar</option>
-                <option value='Eastvale'>Eastvale</option>
-                <option value='Fontana'>Fontana</option>
-                <option value='Glendora'>Glendora</option>
-                <option value='Hesperia'>Hesperia</option>
-                <option value='Irvine'>Irvine</option>
-                <option value='Jurupa Valley'>Jurupa Valley</option>
-                <option value='Lake Elsinore'>Lake Elsinore</option>
-                <option value='Menifee'>Menifee</option>
-                <option value='Montclair'>Montclair</option>
-                <option value='Moreno Valley'>Moreno Valley</option>
-                <option value='Murrieta'>Murrieta</option>
-                <option value='Newport Beach'>Newport Beach</option>
-                <option value='Norco'>Norco</option>
-                <option value='Ontario'>Ontario</option>
-                <option value='Perris'>Perris</option>
-                <option value='Placentia'>Placentia</option>
-                <option value='Pomona'>Pomona</option>
-                <option value='Rancho Cucamonga'>Rancho Cucamonga</option>
-                <option value='Redlands'>Redlands</option>
-                <option value='Riverside'>Riverside</option>
-                <option value='Rialto'>Rialto</option>
-                <option value='Rowland Heights'>Rowland Heights</option>
-                <option value='San Bernardino'>San Bernardino</option>
-                <option value='San Dimas'>San Dimas</option>
-                <option value='Temecula'>Temecula</option>
-                <option value='Upland'>Upland</option>
-                <option value='Victorville'>Victorville</option>
-                <option value='Walnut'>Walnut</option>
-                <option value='West Covina'>West Covina</option>
-              </select>
-            </div>
-          </div>
+          <DropdownInputBox
+            question={'Please provide us the city you currently reside at:'}
+            defaultOption={'NOT LISTED'}
+            arrayOfOptions={[
+              'Azusa',
+              'Banning',
+              'Beaumont',
+              'Brea',
+              'Chino',
+              'Claremont',
+              'Colton',
+              'Corona',
+              'Covina',
+              'DiamondBar',
+              'Eastvale',
+              'Fontana',
+              'Glendora',
+              'Hesperia',
+              'Irvine',
+              'JurupaValley',
+              'Lake Elsinore',
+              'Menifee',
+              'Montclair',
+              'MorenoValley',
+              'Murrieta',
+              'NewportBeach',
+              'Norco',
+              'Ontario',
+              'Perris',
+              'Placentia',
+              'Pomona',
+              'RanchoCucamonga',
+              'Redlands',
+              'Riverside',
+              'Rialto',
+              'Rowland Heights',
+              'SanBernardino',
+              'SanDimas',
+              'Temecula',
+              'Upland',
+              'Victorville',
+              'Walnut',
+              'West Covina',
+            ]}
+            storageKey={'currentCity'}
+            func={handleInputChange}
+            boxStyleModifiers={'commuter-box questionnaire-left-border'}
+            required={true}
+          />
 
           {/* Box 5 */}
-          <div className='questionnaire-box commuter-box questionnaire-left-border'>
-            <div className='questionnaire-question'>
-              If city is not listed, please type the name of the city below
-              <span className='required'> *</span>
-              <input
-                type='text'
-                placeholder='City name'
-                className='questionnaire-input'
-              ></input>
-            </div>
-          </div>
+          <ShortAnswerBox
+            question={
+              'If city is not listed, please type the name of the city below'
+            }
+            placeholder={'City name'}
+            storageKey={'cityIfNotListed'}
+            func={handleInputChange}
+            required={true}
+            boxStyleModifier={'commuter-box questionnaire-left-border'}
+          />
         </Fragment>
       )}
 
@@ -185,7 +186,7 @@ const StudyGroupQuestions = ({}) => {
               name='answer'
               value='Library on Campus'
             />
-            <label for='Library on Campus'>Library on Campus</label>
+            <label htmlFor='Library on Campus'>Library on Campus</label>
           </div>
           <div className='questionnaire-check-item'>
             <input
@@ -194,7 +195,7 @@ const StudyGroupQuestions = ({}) => {
               name='answer'
               value='Department Rooms on Campus'
             />
-            <label for='Department Rooms on Campus'>
+            <label htmlFor='Department Rooms on Campus'>
               Department Rooms on Campus
             </label>
           </div>
@@ -205,7 +206,7 @@ const StudyGroupQuestions = ({}) => {
               name='answer'
               value='Coffee Shop'
             />
-            <label for='Coffee Shop'>Coffee Shop</label>
+            <label htmlFor='Coffee Shop'>Coffee Shop</label>
           </div>
           <div className='questionnaire-check-item'>
             <input
@@ -214,7 +215,7 @@ const StudyGroupQuestions = ({}) => {
               name='answer'
               value='Home'
             />
-            <label for='Home'>Home</label>
+            <label htmlFor='Home'>Home</label>
           </div>
         </div>
       </div>
