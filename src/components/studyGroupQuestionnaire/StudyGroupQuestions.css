@@ -89,6 +89,14 @@
   color: #202124;
 }
 
+.questionnaire-alert {
+  position: fixed;
+  top: 10px;
+  left: 50%;
+
+  transform: translate(-50%);
+}
+
 .required {
   color: #d93025;
 }
@@ -220,7 +228,7 @@
 
   border-radius: 8px;
   background-color: #85d3d7;
-  font-size: 2rem;
+  font-size: 1.7rem;
 
   color: #fff;
 
@@ -293,6 +301,13 @@
 
   .questionnaire-submit {
     width: 50%;
+  }
+
+  .questionnaire-alert {
+    top: 7px;
+    text-align: center;
+    width: 100%;
+    font-size: 0.8rem;
   }
 
   html {

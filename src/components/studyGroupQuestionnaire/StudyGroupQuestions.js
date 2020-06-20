@@ -9,6 +9,7 @@ import DropdownInputBox from './dropdownInputBox/dropdownInputBox';
 import TrueFalseBox from './trueFalseBox/trueFalseBox';
 import CheckboxBox from './checkboxBox/checkboxBox';
 import HeaderBox from './headerBox/headerBox';
+import SubmitButton from './questionnaireSubmit/questionnaireSubmit';
 
 const StudyGroupQuestions = () => {
   const [data, setData] = useState({
@@ -33,6 +34,15 @@ const StudyGroupQuestions = () => {
   console.log(data);
 
   const [commuter, setCommuter] = useState(null);
+
+  const [error, setError] = useState(false);
+
+  const toggleError = () => {
+    setError(true);
+    setTimeout(function () {
+      setError(false);
+    }, 4000);
+  };
 
   const handleInputChange = (e) => {
     let answer = e.target.value;
@@ -84,6 +94,8 @@ const StudyGroupQuestions = () => {
     console.log(entries); /* delete later */
     entries.map((entry) => {
       if (entry[1] === undefined) {
+        window.scrollTo(0, 0);
+        toggleError();
         console.log(`${entry[0]} is not filled out!`);
       }
     });
@@ -91,6 +103,12 @@ const StudyGroupQuestions = () => {
 
   return (
     <div className='study-group-questionnaire-container'>
+      {error && (
+        <div className='questionnaire-alert required'>
+          Please check to see if you have filled out all required fields.
+        </div>
+      )}
+
       {/* Box 1 */}
       <HeaderBox
         title={'Study Group Questionnaire'}
@@ -310,14 +328,7 @@ const StudyGroupQuestions = () => {
         required={true}
       />
 
-      <div className='questionnaire-submit'>
-        <span
-          onClick={questionnaireSubmit}
-          className='submit-text unselectable'
-        >
-          Submit
-        </span>
-      </div>
+      <SubmitButton text={'Submit'} func={questionnaireSubmit} />
     </div>
   );
 };
