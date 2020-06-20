@@ -11,25 +11,26 @@ import CheckboxBox from './checkboxBox/checkboxBox';
 import HeaderBox from './headerBox/headerBox';
 
 const StudyGroupQuestions = () => {
-  let data = {
-    email: null,
-    fullName: null,
-    studyLocations: [],
-    latestSleepTime: null,
-    studyWithFriend: null,
-    studyWithPatientPerson: null,
-    studyWithExperiencedPerson: null,
-    studyWithOrganizedPerson: null,
-    studyWithSimilarPerson: null,
-    studyWithPunctualPerson: null,
-    mostImportantPreference: null,
-    friendsInClass: null,
-    excludeFromGrouping: null,
-    anonymous: null,
-    commuter: null,
-    currentCity: null,
-    cityIfNotListed: null,
-  };
+  const [data, setData] = useState({
+    email: undefined,
+    fullName: undefined,
+    studyLocations: undefined,
+    latestSleepTime: undefined,
+    studyWithFriend: undefined,
+    studyWithPatientPerson: undefined,
+    studyWithExperiencedPerson: undefined,
+    studyWithOrganizedPerson: undefined,
+    studyWithSimilarPerson: undefined,
+    studyWithPunctualPerson: undefined,
+    mostImportantPreference: undefined,
+    friendsInClass: undefined,
+    excludeFromGrouping: undefined,
+    anonymous: undefined,
+    commuter: undefined,
+    currentCity: 'NOT LISTED',
+    cityIfNotListed: undefined,
+  });
+  console.log(data);
 
   const [commuter, setCommuter] = useState(null);
 
@@ -40,6 +41,12 @@ const StudyGroupQuestions = () => {
   };
 
   const handleTrueFalseRadioClick = (e) => {
+    data[e.target.name] = 'true' === e.target.value;
+    console.log(data); /* delete later */
+  };
+
+  const handleCommuterClick = (e) => {
+    handleTrueFalseRadioClick(e);
     setCommuter('true' === e.target.value);
     console.log(data); /* delete later */
   };
@@ -50,6 +57,7 @@ const StudyGroupQuestions = () => {
   };
 
   const handleCheckboxClick = (e) => {
+    data[e.target.name] = [];
     if (!data[e.target.name].includes(e.target.value)) {
       data[e.target.name].push(e.target.value);
       console.log(data); /* delete later */
@@ -60,6 +68,25 @@ const StudyGroupQuestions = () => {
       data[e.target.name] = filteredArray;
       console.log(data); /* delete later */
     }
+  };
+
+  const questionnaireSubmit = () => {
+    // If user is NOT a commuter, nullify their city information (because it doesn't matter)
+    if (data.commuter === false) {
+      data.currentCity = null;
+      data.cityIfNotListed = null;
+    } else {
+      if (!(data.currentCity === 'NOT LISTED')) {
+        data.cityIfNotListed = null;
+      }
+    }
+    let entries = Object.entries(data);
+    console.log(entries); /* delete later */
+    entries.map((entry) => {
+      if (entry[1] === undefined) {
+        console.log(`${entry[0]} is not filled out!`);
+      }
+    });
   };
 
   return (
@@ -87,109 +114,18 @@ const StudyGroupQuestions = () => {
       />
 
       {/* Box 3 */}
-      {/*   question,
-  description,
-  trueLabel,
-  falseLabel,
-  storageKey,
-  func,
-  required,  question,
-  description,
-  trueLabel,
-  falseLabel,
-  storageKey,
-  func,
-  required,  question,
-  description,
-  trueLabel,
-  falseLabel,
-  storageKey,
-  func,
-  required,  question,
-  description,
-  trueLabel,
-  falseLabel,
-  storageKey,
-  func,
-  required,  question,
-  description,
-  trueLabel,
-  falseLabel,
-  storageKey,
-  func,
-  required,  question,
-  description,
-  trueLabel,
-  falseLabel,
-  storageKey,
-  func,
-  required,  question,
-  description,
-  trueLabel,
-  falseLabel,
-  storageKey,
-  func,
-  required,  question,
-  description,
-  trueLabel,
-  falseLabel,
-  storageKey,
-  func,
-  required,  question,
-  description,
-  trueLabel,
-  falseLabel,
-  storageKey,
-  func,
-  required,  question,
-  description,
-  trueLabel,
-  falseLabel,
-  storageKey,
-  func,
-  required,  question,
-  description,
-  trueLabel,
-  falseLabel,
-  storageKey,
-  func,
-  required,  question,
-  description,
-  trueLabel,
-  falseLabel,
-  storageKey,
-  func,
-  required,  question,
-  description,
-  trueLabel,
-  falseLabel,
-  storageKey,
-  func,
-  required,  question,
-  description,
-  trueLabel,
-  falseLabel,
-  storageKey,
-  func,
-  required,  question,
-  description,
-  trueLabel,
-  falseLabel,
-  storageKey,
-  func,
-  required,  question,
-  description,
-  trueLabel,
-  falseLabel,
-  storageKey,
-  func,
-  required,  question,
-  description,
-  trueLabel,
-  falseLabel,
-  storageKey,
-  func,
-  required, */}
+      <TrueFalseBox
+        question={'Are you a commuter?'}
+        description={
+          'If you are not sure, the best way to tell is if you could reasonably walk to campus or not (i.e. live on campus), or if you need a car to arrive to campus'
+        }
+        trueLabel={'Yes'}
+        falseLabel={'No'}
+        storageKey={'commuter'}
+        func={handleCommuterClick}
+        required={true}
+      />
+
       {commuter && (
         <Fragment>
           {/* Box 4 */}
@@ -206,31 +142,31 @@ const StudyGroupQuestions = () => {
               'Colton',
               'Corona',
               'Covina',
-              'DiamondBar',
+              'Diamond Bar',
               'Eastvale',
               'Fontana',
               'Glendora',
               'Hesperia',
               'Irvine',
-              'JurupaValley',
+              'Jurupa Valley',
               'Lake Elsinore',
               'Menifee',
               'Montclair',
-              'MorenoValley',
+              'Moreno Valley',
               'Murrieta',
-              'NewportBeach',
+              'Newport Beach',
               'Norco',
               'Ontario',
               'Perris',
               'Placentia',
               'Pomona',
-              'RanchoCucamonga',
+              'Rancho Cucamonga',
               'Redlands',
               'Riverside',
               'Rialto',
               'Rowland Heights',
-              'SanBernardino',
-              'SanDimas',
+              'San Bernardino',
+              'San Dimas',
               'Temecula',
               'Upland',
               'Victorville',
@@ -364,6 +300,24 @@ const StudyGroupQuestions = () => {
         func={handleInputChange}
         required={true}
       />
+      {/* Box 18 */}
+      <TrueFalseBox
+        question={'I would like to remain anonymous for this poll'}
+        trueLabel={'Yes'}
+        falseLabel={'No'}
+        storageKey={'anonymous'}
+        func={handleTrueFalseRadioClick}
+        required={true}
+      />
+
+      <div className='questionnaire-submit'>
+        <span
+          onClick={questionnaireSubmit}
+          className='submit-text unselectable'
+        >
+          Submit
+        </span>
+      </div>
     </div>
   );
 };
