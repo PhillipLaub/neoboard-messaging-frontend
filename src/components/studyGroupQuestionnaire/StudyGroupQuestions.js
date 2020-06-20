@@ -6,6 +6,9 @@ import RadioScaleBox from './radioScaleBox/radioScaleBox';
 import DescriptionBox from './descriptionBox/descriptionBox';
 import TimeInputBox from './timeInputBox/timeInputBox';
 import DropdownInputBox from './dropdownInputBox/dropdownInputBox';
+import TrueFalseBox from './trueFalseBox/trueFalseBox';
+import CheckboxBox from './checkboxBox/checkboxBox';
+import HeaderBox from './headerBox/headerBox';
 
 const StudyGroupQuestions = () => {
   let data = {
@@ -38,11 +41,25 @@ const StudyGroupQuestions = () => {
 
   const handleTrueFalseRadioClick = (e) => {
     setCommuter('true' === e.target.value);
+    console.log(data); /* delete later */
   };
 
   const handleRadioScaleClick = (e) => {
     data[e.target.name] = parseInt(e.target.value);
     console.log(data); /* delete later */
+  };
+
+  const handleCheckboxClick = (e) => {
+    if (!data[e.target.name].includes(e.target.value)) {
+      data[e.target.name].push(e.target.value);
+      console.log(data); /* delete later */
+    } else {
+      let filteredArray = data[e.target.name].filter(
+        (element) => element !== e.target.value
+      );
+      data[e.target.name] = filteredArray;
+      console.log(data); /* delete later */
+    }
   };
 
   return (
@@ -78,36 +95,109 @@ const StudyGroupQuestions = () => {
       />
 
       {/* Box 3 */}
-      <div className='questionnaire-box'>
-        <div className='questionnaire-question'>
-          Are you a commuter? <span className='required'> *</span>
-          <div className='questionnaire-description'>
-            If you are not sure, the best way to tell is if you could reasonably
-            walk to campus or not (i.e. live on campus), or if you need a car to
-            arrive to campus.
-          </div>
-          <div className='questionnaire-check-item'>
-            <input
-              type='radio'
-              className='questionnaire-input'
-              name='no'
-              value='true'
-              onClick={handleTrueFalseRadioClick}
-            />
-            <label htmlFor='yes'>Yes</label>
-          </div>
-          <div className='questionnaire-check-item'>
-            <input
-              type='radio'
-              className='questionnaire-input'
-              name='no'
-              value='false'
-              onClick={handleTrueFalseRadioClick}
-            />
-            <label htmlFor='no'>No</label>
-          </div>
-        </div>
-      </div>
+      {/*   question,
+  description,
+  trueLabel,
+  falseLabel,
+  storageKey,
+  func,
+  required,  question,
+  description,
+  trueLabel,
+  falseLabel,
+  storageKey,
+  func,
+  required,  question,
+  description,
+  trueLabel,
+  falseLabel,
+  storageKey,
+  func,
+  required,  question,
+  description,
+  trueLabel,
+  falseLabel,
+  storageKey,
+  func,
+  required,  question,
+  description,
+  trueLabel,
+  falseLabel,
+  storageKey,
+  func,
+  required,  question,
+  description,
+  trueLabel,
+  falseLabel,
+  storageKey,
+  func,
+  required,  question,
+  description,
+  trueLabel,
+  falseLabel,
+  storageKey,
+  func,
+  required,  question,
+  description,
+  trueLabel,
+  falseLabel,
+  storageKey,
+  func,
+  required,  question,
+  description,
+  trueLabel,
+  falseLabel,
+  storageKey,
+  func,
+  required,  question,
+  description,
+  trueLabel,
+  falseLabel,
+  storageKey,
+  func,
+  required,  question,
+  description,
+  trueLabel,
+  falseLabel,
+  storageKey,
+  func,
+  required,  question,
+  description,
+  trueLabel,
+  falseLabel,
+  storageKey,
+  func,
+  required,  question,
+  description,
+  trueLabel,
+  falseLabel,
+  storageKey,
+  func,
+  required,  question,
+  description,
+  trueLabel,
+  falseLabel,
+  storageKey,
+  func,
+  required,  question,
+  description,
+  trueLabel,
+  falseLabel,
+  storageKey,
+  func,
+  required,  question,
+  description,
+  trueLabel,
+  falseLabel,
+  storageKey,
+  func,
+  required,  question,
+  description,
+  trueLabel,
+  falseLabel,
+  storageKey,
+  func,
+  required, */}
       {commuter && (
         <Fragment>
           {/* Box 4 */}
@@ -176,49 +266,18 @@ const StudyGroupQuestions = () => {
       )}
 
       {/* Box 6 */}
-      <div className='questionnaire-box'>
-        <div className='questionnaire-question'>
-          Where do you prefer to study? <span className='required'> *</span>
-          <div className='questionnaire-check-item'>
-            <input
-              type='checkbox'
-              className='questionnaire-input'
-              name='answer'
-              value='Library on Campus'
-            />
-            <label htmlFor='Library on Campus'>Library on Campus</label>
-          </div>
-          <div className='questionnaire-check-item'>
-            <input
-              type='checkbox'
-              className='questionnaire-input'
-              name='answer'
-              value='Department Rooms on Campus'
-            />
-            <label htmlFor='Department Rooms on Campus'>
-              Department Rooms on Campus
-            </label>
-          </div>
-          <div className='questionnaire-check-item'>
-            <input
-              type='checkbox'
-              className='questionnaire-input'
-              name='answer'
-              value='Coffee Shop'
-            />
-            <label htmlFor='Coffee Shop'>Coffee Shop</label>
-          </div>
-          <div className='questionnaire-check-item'>
-            <input
-              type='checkbox'
-              className='questionnaire-input'
-              name='answer'
-              value='Home'
-            />
-            <label htmlFor='Home'>Home</label>
-          </div>
-        </div>
-      </div>
+      <CheckboxBox
+        question={'Where do you prefer to study with a group?'}
+        arrayOfOptions={[
+          'Library on Campus',
+          'Department Rooms on Campus',
+          'Coffee Shop',
+          'Home',
+        ]}
+        storageKey={'studyLocations'}
+        func={handleCheckboxClick}
+        required={true}
+      />
 
       {/* Box 7 */}
 
