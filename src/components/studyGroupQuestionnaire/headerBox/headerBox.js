@@ -1,24 +1,37 @@
-import React from 'react';
+import React, { Fragment } from 'react';
 
-const headerBox = () => {
+const headerBox = ({
+  title,
+  description,
+  question,
+  placeholder,
+  storageKey,
+  func,
+  required,
+}) => {
   return (
     <div className='questionnaire-box questionnaire-top-border'>
-      <div className='questionnaire-header'>Study Group Questionnaire</div>
+      <div className='questionnaire-header'>{title}</div>
       <hr className='questionnaire-break' />
-      <div className='questionnaire-description'>
-        This questionnaire is for your online course. Please fill out this
-        questionnaire to provide us some information on how you decide who to
-        study with, all information collected will remain anonymous and will
-        only be used to organize everyone into groups.
-      </div>
-      <hr className='questionnaire-break' />
+      {description && (
+        <Fragment>
+          <div className='questionnaire-description'>{description}</div>
+          <hr className='questionnaire-break' />
+        </Fragment>
+      )}
       <div className='questionnaire-question'>
-        Email address <span className='required'>*</span>
-        <input
-          type='text'
-          placeholder='Valid email address'
-          className='questionnaire-input'
-        ></input>
+        {question && (
+          <Fragment>
+            {question} {required && <span className='required'>*</span>}
+            <input
+              type='text'
+              placeholder={placeholder}
+              className='questionnaire-input'
+              name={storageKey}
+              onChange={func}
+            ></input>
+          </Fragment>
+        )}
       </div>
     </div>
   );
