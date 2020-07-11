@@ -19,7 +19,7 @@ import otherUserInformation from './data/otherUserInfo.json';
 
 // For private user layout
 import PrivateUser from './components/privateUser/PrivateUser';
-import privateUserInfo from './data/privateUserInfo.json';
+import privateUserInformation from './data/privateUserInfo.json';
 
 // For survey form layout
 import SurveyForm from './components/surveyForm/SurveyForm';
@@ -40,13 +40,45 @@ function App() {
   const [otherUserInfo, setOtherUserInfo] = useState(otherUserInformation);
 
   return (
-    <div className='App'>
-      <Fragment>
-        {/*         <Navbar /> */}
-        {/* Replace the below component with one of the others commented below the return to switch pages */}
-        <StudyGroupQuestionnaire />
-      </Fragment>
-    </div>
+    <Router>
+      <div className='App'>
+        <Fragment>
+          <Navbar />
+          <Switch>
+            <Route
+              exact
+              path='/user'
+              render={(props) => (
+                <User {...props} userInfo={loggedInUserInfo} />
+              )}
+            />
+            <Route
+              exact
+              path='/otherUser'
+              render={(props) => (
+                <OtherUser {...props} otherUserInfo={otherUserInformation} />
+              )}
+            />
+            <Route
+              exact
+              path='/privateUser'
+              render={(props) => (
+                <PrivateUser
+                  {...props}
+                  privateUserInfo={privateUserInformation}
+                />
+              )}
+            />
+            <Route exact path='/survey' component={SurveyForm} />
+            <Route
+              exact
+              path='/questionnaire'
+              component={StudyGroupQuestionnaire}
+            />
+          </Switch>
+        </Fragment>
+      </div>
+    </Router>
   );
 }
 
