@@ -5,6 +5,8 @@ import { BrowserRouter as Router, Switch, Route, Link } from 'react-router-dom';
 
 import Navbar from './components/navbar/Navbar';
 
+import Sidebar from './components/sidebar/Sidebar';
+
 // For the messaging layout
 import Messaging from './components/pages/Messaging';
 import userComments from './data/comments';
@@ -41,55 +43,69 @@ function App() {
 
   return (
     <Router>
-      <div className='App'>
-        <Switch>
-          <Route
-            exact
-            path='/user'
-            render={(props) => (
-              <Fragment>
-                <Navbar />
-                <User {...props} userInfo={loggedInUserInfo} />
-              </Fragment>
-            )}
-          />
-          <Route
-            exact
-            path='/otherUser'
-            render={(props) => (
-              <Fragment>
-                <Navbar />
-                <OtherUser {...props} otherUserInfo={otherUserInformation} />
-              </Fragment>
-            )}
-          />
-          <Route
-            exact
-            path='/privateUser'
-            render={(props) => (
-              <Fragment>
-                <Navbar />
-                <PrivateUser
-                  {...props}
-                  privateUserInfo={privateUserInformation}
-                />
-              </Fragment>
-            )}
-          />
-          <Route exact path='/survey' component={SurveyForm} />
-          <Route
-            exact
-            path='/questionnaire'
-            render={(props) => (
-              <Fragment>
-                <StudyGroupQuestionnaire
-                  {...props}
-                  userInfo={loggedInUserInfo}
-                />
-              </Fragment>
-            )}
-          />
-        </Switch>
+      <div id='app' className='App'>
+        <div id='outer-container'>
+          <Navbar />
+          <Switch>
+            <Route
+              exact
+              path='/messaging'
+              render={(props) => (
+                <Fragment>
+                  <Messaging
+                    {...props}
+                    comments={comments}
+                    subject={channel}
+                    newMessages={newMessages}
+                  />
+                </Fragment>
+              )}
+            />
+            <Route
+              exact
+              path='/user'
+              render={(props) => (
+                <Fragment>
+                  <User {...props} userInfo={loggedInUserInfo} />
+                </Fragment>
+              )}
+            />
+            <Route
+              exact
+              path='/otherUser'
+              render={(props) => (
+                <Fragment>
+                  <OtherUser {...props} otherUserInfo={otherUserInformation} />
+                </Fragment>
+              )}
+            />
+            <Route
+              exact
+              path='/privateUser'
+              render={(props) => (
+                <Fragment>
+                  <PrivateUser
+                    {...props}
+                    privateUserInfo={privateUserInformation}
+                  />
+                </Fragment>
+              )}
+            />
+            <Route exact path='/survey' component={SurveyForm} />
+            <Route
+              exact
+              path='/questionnaire'
+              render={(props) => (
+                <Fragment>
+                  <StudyGroupQuestionnaire
+                    {...props}
+                    userInfo={loggedInUserInfo}
+                  />
+                </Fragment>
+              )}
+            />
+          </Switch>
+        </div>
       </div>
     </Router>
   );

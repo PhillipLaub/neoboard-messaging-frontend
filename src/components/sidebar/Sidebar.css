@@ -1,0 +1,57 @@
+.bm-menu-wrap {
+  position: fixed;
+  height: 100%;
+}
+
+/* General sidebar styles */
+.bm-menu {
+  background: #f2f2f2;
+
+  font-size: 1.15em;
+}
+
+/* Morph shape necessary with bubble or elastic */
+.bm-morph-shape {
+  fill: #373a47;
+}
+
+/* Wrapper for item list */
+.bm-item-list {
+  color: #162d3f;
+}
+
+/* Individual item */
+.bm-item {
+  display: inline-block;
+}
+
+/* Styling of overlay */
+.bm-overlay {
+  background: rgba(0, 0, 0, 0.3);
+}
+
+.menu-list {
+}
+
+.menu-item {
+  width: 40%;
+  padding: 10px 0;
+}
+
+.menu-item i {
+  padding: 3px 10px;
+  border-radius: 10px;
+  background-color: #daf2f5;
+}
+
+.subject-icon {
+  text-align: center;
+  font-size: 2.4rem;
+}
+
+.subject-name {
+  text-align: center;
+  font-family: Quicksand;
+  font-weight: 500;
+  font-size: 18px;
+}
