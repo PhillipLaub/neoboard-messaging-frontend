@@ -42,41 +42,54 @@ function App() {
   return (
     <Router>
       <div className='App'>
-        <Fragment>
-          <Navbar />
-          <Switch>
-            <Route
-              exact
-              path='/user'
-              render={(props) => (
+        <Switch>
+          <Route
+            exact
+            path='/user'
+            render={(props) => (
+              <Fragment>
+                <Navbar />
                 <User {...props} userInfo={loggedInUserInfo} />
-              )}
-            />
-            <Route
-              exact
-              path='/otherUser'
-              render={(props) => (
+              </Fragment>
+            )}
+          />
+          <Route
+            exact
+            path='/otherUser'
+            render={(props) => (
+              <Fragment>
+                <Navbar />
                 <OtherUser {...props} otherUserInfo={otherUserInformation} />
-              )}
-            />
-            <Route
-              exact
-              path='/privateUser'
-              render={(props) => (
+              </Fragment>
+            )}
+          />
+          <Route
+            exact
+            path='/privateUser'
+            render={(props) => (
+              <Fragment>
+                <Navbar />
                 <PrivateUser
                   {...props}
                   privateUserInfo={privateUserInformation}
                 />
-              )}
-            />
-            <Route exact path='/survey' component={SurveyForm} />
-            <Route
-              exact
-              path='/questionnaire'
-              component={StudyGroupQuestionnaire}
-            />
-          </Switch>
-        </Fragment>
+              </Fragment>
+            )}
+          />
+          <Route exact path='/survey' component={SurveyForm} />
+          <Route
+            exact
+            path='/questionnaire'
+            render={(props) => (
+              <Fragment>
+                <StudyGroupQuestionnaire
+                  {...props}
+                  userInfo={loggedInUserInfo}
+                />
+              </Fragment>
+            )}
+          />
+        </Switch>
       </div>
     </Router>
   );
