@@ -5,12 +5,11 @@ import Burger from '../burger/Burger';
 import Sidebar from '../sidebar/Sidebar';
 
 const Navbar = () => {
-  return (
-    <div className='navbar'>
-      <Burger />
-      <Sidebar />
-    </div>
-  );
+    return (
+        <div className='navbar'>
+            <Burger />
+        </div>
+    );
 };
 
 export default Navbar;

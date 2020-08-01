@@ -362,6 +362,6 @@
         /* This is being set for the purpose of easy rem calculations throughout the application */
         /* Browser default size is 16px, but we want to set it to a percentage in case people with bad eyes have a different default */
         /* The percentage is 62.5% because it equates to 10px assuming the 16px default */
-        font-size: 100%;
+        /* font-size: 100%; */
     }
 }

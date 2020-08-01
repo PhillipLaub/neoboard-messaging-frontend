@@ -1,57 +1,64 @@
 .bm-menu-wrap {
-  position: fixed;
-  height: 100%;
+    position: fixed;
+    height: 100%;
+    top: 0;
+    left: 0;
+
+    z-index: 200;
 }
 
 /* General sidebar styles */
 .bm-menu {
-  background: #f2f2f2;
+    background: #f2f2f2;
 
-  font-size: 1.15em;
+    font-size: 1.15em;
 }
 
 /* Morph shape necessary with bubble or elastic */
 .bm-morph-shape {
-  fill: #373a47;
+    fill: #373a47;
 }
 
 /* Wrapper for item list */
 .bm-item-list {
-  color: #162d3f;
+    color: #162d3f;
 }
 
 /* Individual item */
 .bm-item {
-  display: inline-block;
+    display: inline-block;
 }
 
 /* Styling of overlay */
 .bm-overlay {
-  background: rgba(0, 0, 0, 0.3);
+    background: rgba(0, 0, 0, 0.3);
+    top: 0;
+    left: 0;
 }
 
 .menu-list {
+    outline: none;
 }
 
 .menu-item {
-  width: 40%;
-  padding: 10px 0;
+    width: 40%;
+    padding: 10px 0;
 }
 
 .menu-item i {
-  padding: 3px 10px;
-  border-radius: 10px;
-  background-color: #daf2f5;
+    padding: 3px 10px;
+    border-radius: 10px;
+    background-color: #daf2f5;
 }
 
 .subject-icon {
-  text-align: center;
-  font-size: 2.4rem;
+    text-align: center;
+    font-size: 2.4rem;
 }
 
 .subject-name {
-  text-align: center;
-  font-family: Quicksand;
-  font-weight: 500;
-  font-size: 18px;
+    text-align: center;
+    font-family: Quicksand;
+    font-weight: 500;
+    font-size: 18px;
 }
