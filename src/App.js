@@ -91,7 +91,15 @@ function App() {
                 </Fragment>
               )}
             />
-            <Route exact path='/survey' component={SurveyForm} />
+            <Route
+              exact
+              path='/survey'
+              render={(props) => (
+                <Fragment>
+                  <SurveyForm {...props} userInfo={loggedInUserInfo} />
+                </Fragment>
+              )}
+            />
             <Route
               exact
               path='/questionnaire'

@@ -22,15 +22,60 @@ const CurfewTime = () => {
       <div className='curfew-time-container'>
         <div className='half-container half-container-left'>
           <div className='clock'>
-            <input value='8' class='time-item' onClick={timeInput} />
-            <div class='time-item'>9</div>
-            <div class='time-item'>10</div>
-            <div class='time-item'>11</div>
-            <div class='time-item'>12</div>
-            <div class='time-item'>1</div>
-            <div class='time-item'>2</div>
-            <div class='time-item'>3</div>
-            <div class='time-item'>4</div>
+            <input
+              value='8'
+              class='time-item unselectable'
+              readonly='readonly'
+              onClick={timeInput}
+            />
+            <input
+              value='9'
+              class='time-item unselectable'
+              readonly='readonly'
+              onClick={timeInput}
+            />
+            <input
+              value='10'
+              class='time-item unselectable'
+              readonly='readonly'
+              onClick={timeInput}
+            />
+            <input
+              value='11'
+              class='time-item unselectable'
+              readonly='readonly'
+              onClick={timeInput}
+            />
+            <input
+              value='12'
+              class='time-item unselectable'
+              readonly='readonly'
+              onClick={timeInput}
+            />
+            <input
+              value='1'
+              class='time-item unselectable'
+              readonly='readonly'
+              onClick={timeInput}
+            />
+            <input
+              value='2'
+              class='time-item unselectable'
+              readonly='readonly'
+              onClick={timeInput}
+            />
+            <input
+              value='3'
+              class='time-item unselectable'
+              readonly='readonly'
+              onClick={timeInput}
+            />
+            <input
+              value='4'
+              class='time-item unselectable'
+              readonly='readonly'
+              onClick={timeInput}
+            />
             <div class='center'>
               <div class='time-item minute-item'>:45</div>
               <div class='time-item minute-item'>:00</div>
