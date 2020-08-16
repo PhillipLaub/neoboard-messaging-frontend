@@ -13,7 +13,7 @@ const SurveyForm = ({ userInfo: { firstName } }) => {
     <div className='survey-container'>
       <SurveyHeader name={firstName} />
       <form className='survey-form' action=''>
-        <CurfewTime />
+        <CurfewTime func={handleInputChange} />
         <ImportCalendar />
         <SpecialCircumstances />
         <Preferences />

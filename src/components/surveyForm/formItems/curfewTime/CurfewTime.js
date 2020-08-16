@@ -4,16 +4,23 @@ import './CurfewTime.css';
 const CurfewTime = () => {
   const [time, setTime] = useState({
     hour: '9',
-    minute: '00',
+    minute: ':00',
     meridiem: 'PM',
   });
 
   const timeInput = (e) => {
     console.log(e.target.value);
-    let tempTime = time;
-    /*     tempTime.hour = value; */
-
-    /*     setTime(tempTime); */
+    let prevState = time;
+    if (e.target.value.charAt(0) !== ':') {
+      prevState.hour = e.target.value;
+      if (e.target.value <= 4) {
+        prevState.meridiem = 'AM';
+      }
+    } else {
+      prevState.minute = e.target.value;
+    }
+    console.log(prevState);
+    setTime(prevState);
   };
 
   return (
@@ -24,69 +31,90 @@ const CurfewTime = () => {
           <div className='clock'>
             <input
               value='8'
-              class='time-item unselectable'
+              className='time-item unselectable'
               readonly='readonly'
               onClick={timeInput}
             />
             <input
               value='9'
-              class='time-item unselectable'
+              className='time-item unselectable'
               readonly='readonly'
               onClick={timeInput}
             />
             <input
               value='10'
-              class='time-item unselectable'
+              className='time-item unselectable'
               readonly='readonly'
               onClick={timeInput}
             />
             <input
               value='11'
-              class='time-item unselectable'
+              className='time-item unselectable'
               readonly='readonly'
               onClick={timeInput}
             />
             <input
               value='12'
-              class='time-item unselectable'
+              className='time-item unselectable'
               readonly='readonly'
               onClick={timeInput}
             />
             <input
               value='1'
-              class='time-item unselectable'
+              className='time-item unselectable'
               readonly='readonly'
               onClick={timeInput}
             />
             <input
               value='2'
-              class='time-item unselectable'
+              className='time-item unselectable'
               readonly='readonly'
               onClick={timeInput}
             />
             <input
               value='3'
-              class='time-item unselectable'
+              className='time-item unselectable'
               readonly='readonly'
               onClick={timeInput}
             />
             <input
               value='4'
-              class='time-item unselectable'
+              className='time-item unselectable'
               readonly='readonly'
               onClick={timeInput}
             />
             <div class='center'>
-              <div class='time-item minute-item'>:45</div>
-              <div class='time-item minute-item'>:00</div>
-              <div class='time-item minute-item'>:15</div>
-              <div class='time-item minute-item'>:30</div>
+              <input
+                value=':45'
+                className='time-item minute-item unselectable'
+                readonly='readonly'
+                onClick={timeInput}
+              />
+              <input
+                value=':00'
+                className='time-item minute-item unselectable'
+                readonly='readonly'
+                onClick={timeInput}
+              />
+              <input
+                value=':15'
+                className='time-item minute-item unselectable'
+                readonly='readonly'
+                onClick={timeInput}
+              />
+              <input
+                value=':30'
+                className='time-item minute-item unselectable'
+                readonly='readonly'
+                onClick={timeInput}
+              />
             </div>
           </div>
         </div>
         <div className='half-container half-container-right'>
           <div className='time-input'>
-            {time.hour}:{time.minute} {time.meridiem}
+            {time.hour}
+            {time.minute} {time.meridiem}
           </div>
         </div>
       </div>
