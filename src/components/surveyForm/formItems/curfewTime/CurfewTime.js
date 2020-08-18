@@ -19,7 +19,6 @@ const CurfewTime = () => {
     } else {
       prevState.minute = e.target.value;
     }
-    console.log(prevState);
     setTime(prevState);
   };
 
