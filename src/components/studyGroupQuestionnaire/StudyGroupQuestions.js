@@ -47,36 +47,35 @@ const StudyGroupQuestions = () => {
   const handleInputChange = (e) => {
     let answer = e.target.value;
     data[e.target.name] = answer;
-    console.log(data); /* delete later */
+    console.log(data); 
   };
 
   const handleTrueFalseRadioClick = (e) => {
     data[e.target.name] = 'true' === e.target.value;
-    console.log(data); /* delete later */
-  };
+    console.log(data); 
 
   const handleCommuterClick = (e) => {
     handleTrueFalseRadioClick(e);
     setCommuter('true' === e.target.value);
-    console.log(data); /* delete later */
+    console.log(data);
   };
 
   const handleRadioScaleClick = (e) => {
     data[e.target.name] = parseInt(e.target.value);
-    console.log(data); /* delete later */
+    console.log(data);
   };
 
   const handleCheckboxClick = (e) => {
     data[e.target.name] = [];
     if (!data[e.target.name].includes(e.target.value)) {
       data[e.target.name].push(e.target.value);
-      console.log(data); /* delete later */
+      console.log(data);
     } else {
       let filteredArray = data[e.target.name].filter(
         (element) => element !== e.target.value
       );
       data[e.target.name] = filteredArray;
-      console.log(data); /* delete later */
+      console.log(data);
     }
   };
 
