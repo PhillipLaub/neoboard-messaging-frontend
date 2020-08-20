@@ -3,7 +3,7 @@ import './CurfewTime.css';
 
 const CurfewTime = () => {
   const [time, setTime] = useState({
-    hour: '9',
+    hour: '8',
     minute: ':00',
     meridiem: 'PM',
   });
