@@ -8,19 +8,23 @@ import SpecialCircumstances from './formItems/specialCircumstances/SpecialCircum
 import Preferences from './formItems/preferences/Preferences';
 import Locations from './formItems/locations/Locations';
 
+const handleInputChange = () => {
+    console.log(`input!`);
+};
+
 const SurveyForm = ({ userInfo: { firstName } }) => {
-  return (
-    <div className='survey-container'>
-      <SurveyHeader name={firstName} />
-      <form className='survey-form' action=''>
-        <CurfewTime func={handleInputChange} />
-        <ImportCalendar />
-        <SpecialCircumstances />
-        <Preferences />
-        <Locations />
-      </form>
-    </div>
-  );
+    return (
+        <div className='survey-container'>
+            <SurveyHeader name={firstName} />
+            <form className='survey-form' action=''>
+                <CurfewTime func={handleInputChange} />
+                <ImportCalendar />
+                <SpecialCircumstances />
+                <Preferences />
+                <Locations />
+            </form>
+        </div>
+    );
 };
 
 export default SurveyForm;
