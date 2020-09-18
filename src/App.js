@@ -23,9 +23,6 @@ import otherUserInformation from './data/otherUserInfo.json';
 import PrivateUser from './components/privateUser/PrivateUser';
 import privateUserInformation from './data/privateUserInfo.json';
 
-// For survey form layout
-import SurveyForm from './components/surveyForm/SurveyForm';
-
 // For study group questionnaire layout
 import StudyGroupQuestionnaire from './components/pages/StudyGroupQuestionnaire';
 
@@ -88,15 +85,6 @@ function App() {
                     {...props}
                     privateUserInfo={privateUserInformation}
                   />
-                </Fragment>
-              )}
-            />
-            <Route
-              exact
-              path='/survey'
-              render={(props) => (
-                <Fragment>
-                  <SurveyForm {...props} userInfo={loggedInUserInfo} />
                 </Fragment>
               )}
             />
