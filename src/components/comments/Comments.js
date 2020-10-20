@@ -1,6 +1,6 @@
 import React, { Fragment } from 'react';
 import CommentItem from './CommentItem';
-import UpdatesBar from '../updatesBar/UpdatesBar';
+import UpdatesBar from '../UpdatesBar/UpdatesBar';
 import './Comments.css';
 // Write up
 

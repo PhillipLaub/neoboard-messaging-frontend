@@ -133,14 +133,14 @@
   line-height: 3rem;
 }
 
-.return-footer {
+/* .return-footer {
   position: absolute;
   bottom: -6rem;
   left: 50%;
   transform: translate(
     -50%
-  ); /* The box will be shifted half it's width to the left to allow for true centering */
-}
+  ); /* The box will be shifted half it's width to the left to allow for true centering 
+} */
 
 .return-button {
   color: white;

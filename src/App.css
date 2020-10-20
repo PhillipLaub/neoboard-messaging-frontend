@@ -35,3 +35,179 @@ code {
   outline: none;
   cursor: pointer;
 }
+
+/* Dark Mode */
+
+.light-mode {
+  transition: background-color 1.5s ease-out;
+}
+
+
+
+.toggle {
+  position: relative;
+  padding: 0 4px;
+  display: flex;
+  align-items: center;
+}
+
+input[type="checkbox"].checkbox {
+  width: 40px;
+  height: 10px;
+  background: #555;
+  position: relative;
+  border-radius: 5px;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  cursor: pointer;
+  vertical-align: 2px;
+  outline: none;
+}
+
+input[type="checkbox"].checkbox:checked + label {
+  left: 30px;
+}
+
+input[type="checkbox"].checkbox:focus-visible {
+  outline: solid 2px white;
+}
+
+input[type="checkbox"].checkbox + label {
+  display: inline-block;
+  width: 18px;
+  height: 18px;
+  border-radius: 50%;
+  transition: all 0.3s ease;
+  cursor: pointer;
+  position: absolute;
+  left: 2px;
+  background: #fff;
+  opacity: 0.9;
+  background-color: 
+  #169dbf;
+}
+
+.toggle-container {
+  display: flex;
+  margin: 0 auto;
+}
+
+.toggle-container > span {
+  font-size: 1.2em;
+  background: none;
+  border: none;
+  cursor: pointer;
+  transition: color 0.3s ease;
+  margin-top: 4px;
+  margin-right: 2px;
+}
+
+.toggle-container > span:last-child {
+  margin-top: 5px;
+}
+
+.dark-mode .navbar{
+  background: linear-gradient(0deg, #162d3f,#162d3f), #162d3f !important;
+}
+
+.dark-mode .navbar button{
+  color:#DAF2F5;
+}
+
+.dark-mode .bm-menu{
+  background: #162d3f;
+  color:#DAF2F5;
+}
+
+.dark-mode .subject-name{
+  color:#DAF2F5;
+}
+
+.darkmode{
+  text-align: center;
+    font-family: 'Quicksand';
+    font-weight: 500;
+    font-size: 18px !important;
+    width: 40%;
+    padding: 10px 0;
+}
+
+.dark-mode .new-messages{
+  color:#DAF2F5;
+
+}
+
+.dark-mode .username{
+  color:#DAF2F5;
+}
+
+.dark-mode .message{
+  color:#DAF2F5;
+}
+
+.dark-mode .timestamp{
+  color:#C4C4C4;
+}
+
+.dark-mode .comments{
+  background:#000000;
+}
+
+.dark-mode .message-bar{
+  background: #162d3f;
+}
+
+.dark-mode .input-message{
+  background:#121212;
+  color:#DAF2F5;
+}
+
+.dark-mode .reaction{
+  background: #162d3f;
+  color:#DAF2F5;
+}
+
+.dark-mode .name{
+  color:#DAF2F5;
+}
+
+.dark-mode .basic-info-item{
+  color:#DAF2F5;
+}
+
+.dark-mode .user-container{
+  background:#000000;
+}
+
+.dark-mode .school-info-item-group{
+  color:#DAF2F5;
+}
+
+.dark-mode .blue{
+  color: #162d3f;
+}
+
+.dark-mode .blue .edit-button{
+  color:#000000;
+  border: 3px solid #000000;
+}
+.dark-mode .edit-button{
+  color:#DAF2F5;
+  border: 3px solid #DAF2F5;
+}
+
+.dark-mode html{
+  background: #000000;
+}
+
+.return-footer{
+  max-width:50%;
+  margin-left:25%;
+}
+
+.return-button{
+  text-align:center;
+  margin-top:3%;
+}
+/* Dark Mode CSS End */
